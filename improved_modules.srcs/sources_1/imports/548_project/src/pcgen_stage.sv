@@ -26,7 +26,8 @@ module pcgen_stage (
     // to IF
     output logic [63:0]        fetch_address_o,    // new PC (address because we do not distinguish instructions)
     output logic               fetch_valid_o,      // the PC (address) is valid
-    output branchpredict_sbe_t branch_predict_o,   // pass on the information if this is speculative
+	output logic 			   which_branch_taken_o,
+	output branchpredict_sbe_t branch_predict_o,   // pass on the information if this is speculative
     // global input
     input  logic [63:0]        boot_addr_i,
     // from commit
@@ -49,7 +50,7 @@ module pcgen_stage (
     branchpredict_t     resolved_branch_q;
     
     // btb to be optimized to match 
-    /*
+    
     btb #(
         .NR_ENTRIES              ( BTB_ENTRIES             ),
         .BITS_SATURATION_COUNTER ( BITS_SATURATION_COUNTER )
@@ -63,7 +64,7 @@ module pcgen_stage (
         .branch_predict_o        ( branch_predict_btb      ), // read port
         .*
     );
-    */
+    
     
     // -------------------
     // Next PC
@@ -103,9 +104,21 @@ module pcgen_stage (
         // -------------------------------
         // default is a consecutive PC
         if (if_ready_i && fetch_enable_i)
-            // but operate on the current fetch address
-            npc_n = {fetch_address[63:2], 2'b0}  + 64'h4;
+		begin
+            logic [1:0] index_select;
+			index_select = fetch_address[4:2];
+			// but operate on the current fetch address
+			// depending on where current fetch address, we update pc accrodingly
+			case(index_select)
+				2'b00:npc_n = {fetch_address[63:2], 2'b0}  + 64'h10;
 
+				2'b01:npc_n = {fetch_address[63:2], 2'b0}  + 64'hc;
+
+				2'b10:npc_n = {fetch_address[63:2], 2'b0}  + 64'h8;
+
+				2'b11:npc_n = {fetch_address[63:2], 2'b0}  + 64'h4;
+			endcase
+		end
 
         // we only need to stall the consecutive and predicted case since in any other case we will flush at least
         // the front-end which means that the IF stage will always be ready to accept a new request

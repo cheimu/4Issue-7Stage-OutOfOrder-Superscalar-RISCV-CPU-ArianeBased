@@ -25,7 +25,7 @@
 
 module icache #(
     parameter int unsigned FETCH_ADDR_WIDTH = 56,       // Size of the fetch address
-    parameter int unsigned FETCH_DATA_WIDTH = 64,       // Size of the fetch data
+    parameter int unsigned FETCH_DATA_WIDTH = 128,       // Size of the fetch data
     parameter int unsigned ID_WIDTH         = 4,
 
     parameter int unsigned AXI_ADDR_WIDTH   = 64,
@@ -37,8 +37,8 @@ module icache #(
 
     parameter int unsigned NB_BANKS         = 1,        // Number of Cache Banks : DO NOT CHANGE
     parameter int unsigned NB_WAYS          = 4,        // Cache associativity
-    parameter int unsigned CACHE_SIZE       = 16*1024,  // Ccache capacity in Byte
-    parameter int unsigned CACHE_LINE       = 2         // in word of [FETCH_DATA_WIDTH]
+    parameter int unsigned CACHE_SIZE       = 2*16*1024,  // Ccache capacity in Byte
+    parameter int unsigned CACHE_LINE       = 4         // in word of [FETCH_DATA_WIDTH]
 )(
     input logic                            clk_i,
     input logic                            rst_n,
@@ -60,7 +60,7 @@ module icache #(
     input  logic [FETCH_ADDR_WIDTH-1:0]    flush_set_ID_addr_i,
     output logic                           flush_set_ID_ack_o
 );
-    localparam OFFSET             = $clog2(FETCH_DATA_WIDTH)-3;
+    localparam OFFSET             = $clog(4*8) - 1;
     localparam WAY_SIZE           = CACHE_SIZE/NB_WAYS;
     localparam SCM_NUM_ROWS       = WAY_SIZE/(CACHE_LINE*FETCH_DATA_WIDTH/8); // TAG
     localparam SCM_TAG_ADDR_WIDTH = $clog2(SCM_NUM_ROWS);
@@ -177,7 +177,7 @@ module icache #(
         // ------------
         // Tag RAM
         // ------------
-        sram #(
+        /*sram #(
             .DATA_WIDTH ( 46  ),
             .NUM_WORDS  ( 256 )
         ) tag_sram (
@@ -188,12 +188,30 @@ module icache #(
             .wdata_i   ( {1'b0, TAG_wdata_int}            ),
             .be_i      ( '1                               ),
             .rdata_o   ( {dummy_bit[i], TAG_rdata_int[i]} )
-        );
+        );*/
+        
+        bsg_mem_1r1w_sync #(.width_p(52)
+                            ,.els_p(SCM_NUM_ROWS)
+                            ,.read_write_same_addr_p(0)
+                            ,.addr_width_lp($clog(52))
+                            ,.harden_p(1)
+                            ,.disable_collision_warning_p(1)
+                                   )
+            tag_sram
+           (.clk_i(clk_i)
+            ,.reset_i(0)
+            ,.w_v_i(TAG_we_int)
+            ,. w_addr_i(TAG_addr_int)
+            ,. w_data_i( {1'b0, TAG_wdata_int})
+            ,. r_v_i(TAG_req_int[i])
+            ,.r_addr_i(TAG_addr_int)
+            ,.r_data_o({dummy_bit[i], TAG_rdata_int[i]} )
+            );
 
         // ------------
         // Data RAM
         // ------------
-        sram #(
+        /*sram #(
             .DATA_WIDTH ( 64  ),
             .NUM_WORDS  ( 512 )
         ) data_sram (
@@ -204,7 +222,24 @@ module icache #(
             .wdata_i   ( DATA_wdata_int    ),
             .be_i      ( '1                ),
             .rdata_o   ( DATA_rdata_int[i] )
-        );
+        );*/
+        bsg_mem_1r1w_sync #(.width_p(128)
+                                    ,.els_p(SCM_NUM_ROWS * 2)
+                                    ,.read_write_same_addr_p(0)
+                                    ,.addr_width_lp($clog(128))
+                                    ,.harden_p(1)
+                                    ,.disable_collision_warning_p(1)
+                                           )
+                    data_sram
+                   (.clk_i(clk_i)
+                    ,.reset_i(0)
+                    ,.w_v_i(DATA_we_int)
+                    ,.w_addr_i( DATA_addr_int)
+                    ,.w_data_i( {1'b0, DATA_wdata_int})
+                    ,.r_v_i(DATA_req_int[i])
+                    ,.r_addr_i(DATA_addr_int)
+                    ,.r_data_o({dummy_bit[i], DATA_rdata_int[i]} )
+                    );
       end
    endgenerate
 
@@ -332,6 +367,9 @@ module icache_controller #(
    parameter SCM_DATA_ADDR_WIDTH    = 5,
    parameter SCM_TAG_WIDTH          = 8,
    parameter SCM_DATA_WIDTH         = FETCH_DATA_WIDTH,
+
+
+
 
    parameter SET_ID_LSB             = $clog2(FETCH_DATA_WIDTH*CACHE_LINE)-3,
    parameter SET_ID_MSB             = SET_ID_LSB + SCM_TAG_ADDR_WIDTH - 1,
