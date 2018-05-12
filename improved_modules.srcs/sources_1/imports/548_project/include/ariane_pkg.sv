@@ -170,6 +170,11 @@ package ariane_pkg;
         logic                     is_compressed; // signals a compressed instructions, we need this information at the commit stage if
                                                  // we want jump accordingly e.g.: +4, +2
     } scoreboard_entry_t;
+	
+	typedef struct packed {
+		scoreboard_entry_t decoded;
+		logic 			   valid;
+	} decoded_entry_t;
 
     // --------------------
     // Instruction Types
