@@ -30,6 +30,7 @@ module btb #(
     input  logic [63:0]        vpc_i,                     // virtual PC from IF stage
     input  branchpredict_t     branch_predict_i,          // a mis-predict happened -> update data structure
     output logic [1:0]         which_branch_taken_o,
+    output branchpredict_sbe_t branch_predict_to_fifo_o [3:0],
     output branchpredict_sbe_t branch_predict_o           // branch prediction for issuing to the pipeline
 );
     // number of bits which are not used for indexing
@@ -70,7 +71,7 @@ module btb #(
     assign branch_predict_o.predict_taken   = btb_q[index].saturation_counter[BITS_SATURATION_COUNTER-1];
     assign branch_predict_o.predict_address = btb_q[index].target_address;
     assign branch_predict_o.is_lower_16     = btb_q[index].is_lower_16;
-    */
+    */     
     integer i;
     always_comb begin : prediction_results
         // default assignments
@@ -78,9 +79,12 @@ module btb #(
         which_branch_taken_o = 0;
         branch_predict_o.predict_taken = 0;
         branch_predict_o.is_lower_16 = 0;
-        which_branch_taken_o = 0;  
         for (i=3;i>=0;i=i-1)
         begin
+            branch_predict_to_fifo_o[i].valid = (btb_q[index+i].anti_alias == anti_alias_index) ? btb_q[index+i].valid :  1'b0;
+            branch_predict_to_fifo_o[i].predict_taken   = btb_q[index+i].saturation_counter[BITS_SATURATION_COUNTER-1];
+            branch_predict_to_fifo_o[i].predict_address = btb_q[index+i].target_address;
+            branch_predict_to_fifo_o[i].is_lower_16     = btb_q[index+i].is_lower_16;
 			if (cur_index <= index+i)
 			begin
 				// check whether it is a valid prediction

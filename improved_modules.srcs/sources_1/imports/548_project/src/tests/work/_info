@@ -98,3 +98,72 @@ R12
 R13
 !i113 1
 R5
+vicache
+R1
+Z14 !s110 1525898681
+!i10b 1
+!s100 WNS7i333<9VQ<WELzHhjO0
+IVJC4TRSa=PL^Tk7RQG0R;3
+R7
+Z15 !s105 icache_sv_unit
+S1
+R0
+Z16 w1525898678
+Z17 8../icache.sv
+Z18 F../icache.sv
+L0 26
+R3
+r1
+!s85 0
+31
+Z19 !s108 1525898681.000000
+Z20 !s107 ../icache.sv|
+Z21 !s90 -reportprogress|300|../icache.sv|
+!i113 1
+R5
+vicache_controller
+R1
+R14
+!i10b 1
+!s100 RI8_C9^@zSg:0jDVS^IV=3
+IZ1JDdhRF;fMI8_0^QA:1I2
+R7
+R15
+S1
+R0
+R16
+R17
+R18
+L0 358
+R3
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 1
+R5
+vlint_to_axi_refill
+R1
+R14
+!i10b 1
+!s100 AU[RBlkQ=G=;K:=Ug8`d;1
+I7Dfk2P:EAdo4Tdo:0L[hF3
+R7
+R15
+S1
+R0
+R16
+R17
+R18
+L0 281
+R3
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 1
+R5

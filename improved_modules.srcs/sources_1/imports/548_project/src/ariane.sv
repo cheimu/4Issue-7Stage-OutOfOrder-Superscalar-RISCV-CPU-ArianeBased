@@ -658,7 +658,7 @@ module ariane #(
        .rst_n               ( rst_ni                         ),
        .test_en_i           ( test_en_i                      ),
        .fetch_req_i         ( instr_if_data_req              ),
-       .fetch_addr_i        ( {instr_if_address[55:3], 3'b0} ),
+       .fetch_addr_i        ( {instr_if_address[55:4], 4'b0} ),
        .fetch_gnt_o         ( instr_if_data_gnt              ),
        .fetch_rvalid_o      ( instr_if_data_rvalid           ),
        .fetch_rdata_o       ( instr_if_data_rdata            ),

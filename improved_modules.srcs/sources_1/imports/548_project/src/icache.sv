@@ -60,7 +60,7 @@ module icache #(
     input  logic [FETCH_ADDR_WIDTH-1:0]    flush_set_ID_addr_i,
     output logic                           flush_set_ID_ack_o
 );
-    localparam OFFSET             = $clog(4*8) - 1;
+    localparam OFFSET             = 4;
     localparam WAY_SIZE           = CACHE_SIZE/NB_WAYS;
     localparam SCM_NUM_ROWS       = WAY_SIZE/(CACHE_LINE*FETCH_DATA_WIDTH/8); // TAG
     localparam SCM_TAG_ADDR_WIDTH = $clog2(SCM_NUM_ROWS);
@@ -165,7 +165,7 @@ module icache #(
         .refill_gnt_i             ( refill_gnt_from_comp     ),
         .refill_addr_o            ( refill_addr_to_comp      ),
 
-        .refill_r_valid_i         ( refill_r_valid_from_comp ),
+        //.refill_r_valid_i         ( refill_r_valid_from_comp ),
         .refill_r_last_i          ( refill_r_last_from_comp  ),
         .refill_r_data_i          ( refill_r_rdata_from_comp )
    );
@@ -193,7 +193,7 @@ module icache #(
         bsg_mem_1r1w_sync #(.width_p(52)
                             ,.els_p(SCM_NUM_ROWS)
                             ,.read_write_same_addr_p(0)
-                            ,.addr_width_lp($clog(52))
+                            ,.addr_width_lp(6)
                             ,.harden_p(1)
                             ,.disable_collision_warning_p(1)
                                    )
@@ -226,7 +226,7 @@ module icache #(
         bsg_mem_1r1w_sync #(.width_p(128)
                                     ,.els_p(SCM_NUM_ROWS * 2)
                                     ,.read_write_same_addr_p(0)
-                                    ,.addr_width_lp($clog(128))
+                                    ,.addr_width_lp(7)
                                     ,.harden_p(1)
                                     ,.disable_collision_warning_p(1)
                                            )
@@ -821,3 +821,109 @@ module icache_controller #(
     end
 
 endmodule
+
+/*module icache_testbench;
+   parameter int unsigned FETCH_ADDR_WIDTH = 56;
+   parameter int unsigned FETCH_DATA_WIDTH = 64;
+   parameter int unsigned ID_WIDTH         = 5;
+
+   parameter int unsigned AXI_ADDR_WIDTH   = 32;
+   parameter int unsigned AXI_DATA_WIDTH   = 64;
+   parameter int unsigned AXI_USER_WIDTH   = 6;
+   parameter int unsigned AXI_ID_WIDTH     = ID_WIDTH;
+   parameter int unsigned SLICE_DEPTH      = 2;
+   parameter int unsigned AXI_STRB_WIDTH   = AXI_DATA_WIDTH/8;
+    logic                            rst_n;
+    logic                            test_en_i;
+    // interface with processor
+    logic                           fetch_req_i;
+    logic [FETCH_ADDR_WIDTH-1:0]    fetch_addr_i;
+    logic                           fetch_gnt_o;
+    logic                           fetch_rvalid_o;
+    logic [FETCH_DATA_WIDTH-1:0]    fetch_rdata_o;
+
+    AXI_BUS.Master                         axi;                 // refill port
+
+    logic                           bypass_icache_i;
+    logic                           cache_is_bypassed_o;
+    logic                           flush_icache_i;
+    logic                           cache_is_flushed_o;
+    logic                           flush_set_ID_req_i;
+    logic [FETCH_ADDR_WIDTH-1:0]    flush_set_ID_addr_i;
+    logic                           flush_set_ID_ack_o;
+    logic clk;
+	
+    icache icache0(
+        .clk_i(clk),
+        .rst_n(rst_n),
+        .test_en_i(test_en_i),
+        // interface with processor
+        .fetch_req_i(fetch_req_i),
+        .fetch_addr_i(fetch_addr_i),
+        .fetch_gnt_o(fetch_gnt_o),
+        .fetch_rvalid_o(fetch_rvalid_o),
+        .fetch_rdata_o(fetch_rdata_o),
+    
+        .axi(axi),                 // refill port
+    
+        .bypass_icache_i(bypass_icache_i),
+        .cache_is_bypassed_o(cache_is_bypassed_o),
+        .flush_icache_i(flush_icache_i),
+        .cache_is_flushed_o(cache_is_flushed_o),
+        .flush_set_ID_req_i(flush_set_ID_req_i),
+        .flush_set_ID_addr_i(flush_set_ID_addr_i),
+        .flush_set_ID_ack_o(flush_set_ID_ack_o)
+    );
+	parameter CLOCK_PERIOD=1000;
+     initial begin
+     clk <= 0;
+     forever #(CLOCK_PERIOD/2) clk <= ~clk;
+     end
+     integer i;
+     // Set up the inputs to the design. Each line is a clock cycle.
+     initial begin
+     
+	rst_n <=1; @(posedge clk);
+	rst_n <=0; @(posedge clk);
+	test_en_i <=0; fetch_req_i <=1; fetch_addr_i<=0; flush_icache_i <=0; @(posedge clk);
+	 @(posedge clk);
+	 @(posedge clk);
+	  @(posedge clk);
+         @(posedge clk);
+         @(posedge clk);
+         @(posedge clk);
+         @(posedge clk);
+          @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+             @(posedge clk);
+                                 
+     $stop; // End the simulation.
+     end
+endmodule*/

@@ -26,8 +26,9 @@ module pcgen_stage (
     // to IF
     output logic [63:0]        fetch_address_o,    // new PC (address because we do not distinguish instructions)
     output logic               fetch_valid_o,      // the PC (address) is valid
-	output logic 			   which_branch_taken_o,
+	output logic [1:0]		   which_branch_taken_o, // which instruction get a branch
 	output branchpredict_sbe_t branch_predict_o,   // pass on the information if this is speculative
+	output branchpredict_sbe_t branch_predict_to_fifo_o [3:0], // pass branch prediction to fetch fifo
     // global input
     input  logic [63:0]        boot_addr_i,
     // from commit

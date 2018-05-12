@@ -1,0 +1,22 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/name/548_project/improved_modules.srcs/sources_1/imports/548_project/src/axi_slice/axi_ar_buffer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_ar_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/name/548_project/improved_modules.srcs/sources_1/imports/548_project/src/axi_slice/axi_aw_buffer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_aw_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/name/548_project/improved_modules.srcs/sources_1/imports/548_project/src/axi_slice/axi_b_buffer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_b_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/name/548_project/improved_modules.srcs/sources_1/imports/548_project/src/axi_slice/axi_r_buffer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_r_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/name/548_project/improved_modules.srcs/sources_1/imports/548_project/src/axi_slice/axi_slice.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_slice
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/name/548_project/improved_modules.srcs/sources_1/imports/548_project/src/axi_slice/axi_slice_wrap.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_slice_wrap
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/name/548_project/improved_modules.srcs/sources_1/imports/548_project/src/axi_slice/axi_w_buffer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_w_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/name/548_project/improved_modules.srcs/sources_1/imports/548_project/src/util/cluster_clock_gating.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cluster_clock_gating
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/name/548_project/improved_modules.srcs/sources_1/imports/548_project/src/util/generic_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module generic_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/name/548_project/improved_modules.srcs/sources_1/imports/548_project/src/axi_node/axi_node_wrap_with_slices.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_node_wrap_with_slices
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/name/548_project/improved_modules.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

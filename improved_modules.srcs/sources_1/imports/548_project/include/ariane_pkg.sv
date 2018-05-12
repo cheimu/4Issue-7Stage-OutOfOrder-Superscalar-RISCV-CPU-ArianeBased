@@ -145,7 +145,8 @@ package ariane_pkg;
         logic [31:0]        instruction;          // instruction word
         branchpredict_sbe_t branch_predict;       // this field contains branch prediction information regarding the forward branch path
         exception_t         ex;                   // this field contains exceptions which might have happened earlier, e.g.: fetch exceptions
-    } fetch_entry_t;
+		logic 				valid;				  // this field contains whether the fetch entry in buffer is valid
+	} fetch_entry_t;
 
     // ---------------
     // ID/EX/WB Stage

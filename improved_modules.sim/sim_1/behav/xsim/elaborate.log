@@ -1,0 +1,7 @@
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 052c706cf4884dd3b3c443e3a5736d6c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot axi_node_wrap_with_slices_behav xil_defaultlib.axi_node_wrap_with_slices xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-1623] module axi_node_wrap_with_slices having interface port(s) (axi_port_slave, axi_port_master) cannot be elaborated by itself [C:/Users/name/548_project/improved_modules.srcs/sources_1/imports/548_project/src/axi_node/axi_node_wrap_with_slices.sv:43]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
