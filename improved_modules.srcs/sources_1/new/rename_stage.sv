@@ -324,8 +324,8 @@ module rename_stage#(
 				begin
 					// rs translation
 					issue_n[0].sbe = decoded_entry_0_i.decoded;        
-					issue_n[0].sbe.rs1 = lookup_table_q[decoded_entry_0_i.decoded.rs1[ISA_RES_BIT-1:0]];
-					issue_n[0].sbe.rs2 = lookup_table_q[decoded_entry_0_i.decoded.rs2[ISA_RES_BIT-1:0]];
+					issue_n[0].sbe.rs1 = lookup_table_n[decoded_entry_0_i.decoded.rs1[ISA_RES_BIT-1:0]];
+					issue_n[0].sbe.rs2 = lookup_table_n[decoded_entry_0_i.decoded.rs2[ISA_RES_BIT-1:0]];
 					// rd translation & look up
 					if (decoded_entry_0_i.decoded.rd != 31)
 					begin
@@ -352,8 +352,8 @@ module rename_stage#(
 				begin
 					// rs translation
 					issue_n[1].sbe = decoded_entry_1_i.decoded;        
-					issue_n[1].sbe.rs1 = lookup_table_q[decoded_entry_1_i.decoded.rs1[ISA_RES_BIT-1:0]];
-					issue_n[1].sbe.rs2 = lookup_table_q[decoded_entry_1_i.decoded.rs2[ISA_RES_BIT-1:0]];
+					issue_n[1].sbe.rs1 = lookup_table_n[decoded_entry_1_i.decoded.rs1[ISA_RES_BIT-1:0]];
+					issue_n[1].sbe.rs2 = lookup_table_n[decoded_entry_1_i.decoded.rs2[ISA_RES_BIT-1:0]];
 					// rd translation & look up
 					if (decoded_entry_1_i.decoded.rd != 31)
 					begin
@@ -379,8 +379,8 @@ module rename_stage#(
 				    begin
 					// rs translation
 					issue_n[2].sbe = decoded_entry_2_i.decoded;        
-					issue_n[2].sbe.rs1 = lookup_table_q[decoded_entry_2_i.decoded.rs1[ISA_RES_BIT-1:0]];
-					issue_n[2].sbe.rs2 = lookup_table_q[decoded_entry_2_i.decoded.rs2[ISA_RES_BIT-1:0]];
+					issue_n[2].sbe.rs1 = lookup_table_n[decoded_entry_2_i.decoded.rs1[ISA_RES_BIT-1:0]];
+					issue_n[2].sbe.rs2 = lookup_table_n[decoded_entry_2_i.decoded.rs2[ISA_RES_BIT-1:0]];
 					// rd translation & look up
 					if (decoded_entry_2_i.decoded.rd != 31)
 					begin
@@ -406,8 +406,8 @@ module rename_stage#(
 				begin
 					// rs translation
 					issue_n[3].sbe = decoded_entry_3_i.decoded;        
-					issue_n[3].sbe.rs1 = lookup_table_q[decoded_entry_3_i.decoded.rs1[ISA_RES_BIT-1:0]];
-					issue_n[3].sbe.rs2 = lookup_table_q[decoded_entry_3_i.decoded.rs2[ISA_RES_BIT-1:0]];
+					issue_n[3].sbe.rs1 = lookup_table_n[decoded_entry_3_i.decoded.rs1[ISA_RES_BIT-1:0]];
+					issue_n[3].sbe.rs2 = lookup_table_n[decoded_entry_3_i.decoded.rs2[ISA_RES_BIT-1:0]];
 					// rd translation & look up
 					if (decoded_entry_0_i.decoded.rd != 31)
 					begin
