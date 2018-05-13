@@ -65,6 +65,7 @@ package ariane_pkg;
                                       // in the lower 16 bit of the word
         logic        valid;           // prediction with all its values is valid
         logic        clear;           // invalidate this entry
+		logic [8:0]  rename_index;
     } branchpredict_t;
 
     // branchpredict scoreboard entry
@@ -169,6 +170,7 @@ package ariane_pkg;
         branchpredict_sbe_t       bp;            // branch predict scoreboard data structure
         logic                     is_compressed; // signals a compressed instructions, we need this information at the commit stage if
                                                  // we want jump accordingly e.g.: +4, +2
+		logic [8:0]				  rename_index;					  
     } scoreboard_entry_t;
 	
 	typedef struct packed {

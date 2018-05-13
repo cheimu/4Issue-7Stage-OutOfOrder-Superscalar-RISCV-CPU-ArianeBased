@@ -341,6 +341,7 @@ module rename_stage#(
 					// if this instruction is a branch save free list and lookup table
 					if (decoded_entry_0_i.decoded.bp.valid)
 					begin
+						issue_n[0].sbe.rename_index = history_pointer_n;
 						lookup_buffer_n[history_pointer_n] = lookup_table_n;
 						free_buffer_n[history_pointer_n] = free_n;
 						history_pointer_n = history_pointer_n+1;
@@ -369,6 +370,7 @@ module rename_stage#(
 					// if this instruction is a branch save free list and lookup table
 					if (decoded_entry_1_i.decoded.bp.valid)
 					begin
+						issue_n[1].sbe.rename_index = history_pointer_n;
 						lookup_buffer_n[history_pointer_n] = lookup_table_n;
 						free_buffer_n[history_pointer_n] = free_n;
 						history_pointer_n = history_pointer_n+1;
@@ -396,6 +398,7 @@ module rename_stage#(
 					// if this instruction is a branch save free list and lookup table
 					if (decoded_entry_2_i.decoded.bp.valid)
 					begin
+						issue_n[2].sbe.rename_index = history_pointer_n;
 						lookup_buffer_n[history_pointer_n] = lookup_table_n;
 						free_buffer_n[history_pointer_n] = free_n;
 						history_pointer_n = history_pointer_n+1;
@@ -423,6 +426,7 @@ module rename_stage#(
 					// if this instruction is a branch save free list and lookup table
 					if (decoded_entry_3_i.decoded.bp.valid)
 					begin
+						issue_n[3].sbe.rename_index = history_pointer_n;
 						lookup_buffer_n[history_pointer_n] = lookup_table_n;
 						free_buffer_n[history_pointer_n] = free_n;
 						history_pointer_n = history_pointer_n+1;
