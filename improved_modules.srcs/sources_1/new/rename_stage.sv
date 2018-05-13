@@ -342,7 +342,7 @@ module rename_stage#(
 					if (decoded_entry_0_i.decoded.bp.valid)
 					begin
 						lookup_buffer_n[history_pointer_n] = lookup_table_n;
-						free_buffer_n[history_pointer_n] = free_buffer_n;
+						free_buffer_n[history_pointer_n] = free_n;
 						history_pointer_n = history_pointer_n+1;
 					end
 					free_num_n = free_num_n-1;
@@ -370,7 +370,7 @@ module rename_stage#(
 					if (decoded_entry_1_i.decoded.bp.valid)
 					begin
 						lookup_buffer_n[history_pointer_n] = lookup_table_n;
-						free_buffer_n[history_pointer_n] = free_buffer_n;
+						free_buffer_n[history_pointer_n] = free_n;
 						history_pointer_n = history_pointer_n+1;
 					end			
 					free_num_n = free_num_n-1; 
@@ -397,7 +397,7 @@ module rename_stage#(
 					if (decoded_entry_2_i.decoded.bp.valid)
 					begin
 						lookup_buffer_n[history_pointer_n] = lookup_table_n;
-						free_buffer_n[history_pointer_n] = free_buffer_n;
+						free_buffer_n[history_pointer_n] = free_n;
 						history_pointer_n = history_pointer_n+1;
 					end					  
 					free_num_n = free_num_n-1;				  
@@ -424,7 +424,7 @@ module rename_stage#(
 					if (decoded_entry_3_i.decoded.bp.valid)
 					begin
 						lookup_buffer_n[history_pointer_n] = lookup_table_n;
-						free_buffer_n[history_pointer_n] = free_buffer_n;
+						free_buffer_n[history_pointer_n] = free_n;
 						history_pointer_n = history_pointer_n+1;
 					end					   
 					free_num_n = free_num_n-1;
@@ -487,7 +487,7 @@ module rename_stage#(
             read_pointer_q <= read_pointer_n;
 			history_pointer_q <= history_pointer_n;
 			lookup_buffer_q <= lookup_buffer_n;
-			free_buffer_q <= lookup_buffer_n;
+			free_buffer_q <= free_buffer_n;
 			history_num_q <= history_num_n;
 		end
     end       
@@ -605,7 +605,7 @@ module rename_testbench;
 	 decoded_entry_1_i.decoded.rs2<=1;
 	 decoded_entry_1_i.decoded.rd<=5;
 	 decoded_entry_1_i.valid<=1;
-	 decoded_entry_1_i.decoded.bp.valid<=0;
+	 decoded_entry_1_i.decoded.bp.valid<=1;
 	 decoded_entry_valid_2_i<=1;
 	 decoded_entry_2_i.decoded.rs1<=1; 
 	 decoded_entry_2_i.decoded.rs2<=1;
@@ -617,7 +617,7 @@ module rename_testbench;
 	 decoded_entry_3_i.decoded.rs2<=1;
 	 decoded_entry_3_i.decoded.rd<=5;
 	 decoded_entry_3_i.valid<=1;
-	 decoded_entry_3_i.decoded.bp.valid<=0;
+	 decoded_entry_3_i.decoded.bp.valid<=1;
 	 @(posedge clk);
 	 commit_valid_i<= 4'b1111;
 	 commit_register<= {7'b100000, 7'b100001, 7'b100010,7'b100011};
