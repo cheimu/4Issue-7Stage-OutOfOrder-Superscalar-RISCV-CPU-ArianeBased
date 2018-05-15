@@ -16,67 +16,94 @@
 import ariane_pkg::*;
 
 module csr_buffer (
-    input  logic                     clk_i,          // Clock
-    input  logic                     rst_ni,         // Asynchronous reset active low
-    input  logic                     flush_i,
+    input  logic                          clk_i,          // Clock
+    input  logic                          rst_ni,         // Asynchronous reset active low
+    input  logic                          flush_i,
 
-    input  fu_op                     operator_i,
-    input  logic [63:0]              operand_a_i,
-    input  logic [63:0]              operand_b_i,
-    input  logic [TRANS_ID_BITS-1:0] trans_id_i,     // transaction id, needed for WB
+    input  fu_op [3:0]                    operator_i,
+    input  logic [3:0][63:0]              operand_a_i,
+    input  logic [3:0][63:0]              operand_b_i,
+    input  logic [3:0][TRANS_ID_BITS-1:0] trans_id_i,     // transaction id, needed for WB
 
-    output logic                     csr_ready_o,    // FU is ready e.g. not busy
-    input  logic                     csr_valid_i,    // Input is valid
-    output logic [TRANS_ID_BITS-1:0] csr_trans_id_o, // ID of scoreboard entry at which to write back
-    output logic [63:0]              csr_result_o,
-    output logic                     csr_valid_o,    // transaction id for which the output is the requested one
-    input  logic                     commit_i,       // commit the pending CSR OP
+    output logic [3:0]                    csr_ready_o,    // FU is ready e.g. not busy
+    input  logic [3:0]                    csr_valid_i,    // Input is valid
+    output logic [3:0][TRANS_ID_BITS-1:0] csr_trans_id_o, // ID of scoreboard entry at which to write back
+    output logic [3:0][63:0]              csr_result_o,
+    output logic [3:0]                    csr_valid_o,    // transaction id for which the output is the requested one
+    input  logic [3:0]                    commit_i,       // commit the pending CSR OP
 
     // to CSR file
-    output logic  [11:0]             csr_addr_o      // CSR address to commit stage
+    output logic  [3:0][11:0]             csr_addr_o      // CSR address to commit stage
 );
     // this is a single entry store buffer for the address of the CSR
     // which we are going to need in the commit stage
     struct packed {
         logic [11:0] csr_address;
         logic        valid;
-    } csr_reg_n, csr_reg_q;
+    } csr_reg_n[3:0], csr_reg_q[3:0];
 
     // control logic, scoreboard signals
-    assign csr_trans_id_o = trans_id_i;
+    assign csr_trans_id_o[3:0] = trans_id_i[3:0];
     // CSR instructions for this post buffer are single cycle
-    assign csr_valid_o    = csr_valid_i;
-    assign csr_result_o   = operand_a_i;
-    assign csr_addr_o     = csr_reg_q.csr_address;
+    assign csr_valid_o[3:0]    = csr_valid_i[3:0];
+    assign csr_result_o[3:0]   = operand_a_i[3:0];
+    assign csr_addr_o[3:0]     = csr_reg_q.csr_address[3:0];
 
     // write logic
     always_comb begin : write
-        csr_reg_n  = csr_reg_q;
+        csr_reg_n[3:0]  = csr_reg_q[3:0];
         // by default we are ready
-        csr_ready_o = 1'b1;
+        csr_ready_o[3:0] = 4'b1111;
         // if we have a valid uncomiited csr req or are just getting one WITHOUT a commit in, we are not ready
-        if ((csr_reg_q.valid || csr_valid_i) && ~commit_i)
-            csr_ready_o = 1'b0;
+        if ((csr_reg_q.valid[3] || csr_valid_i[3]) && ~commit_i[3])
+            csr_ready_o[3] = 1'b0;
+	if ((csr_reg_q.valid[2] || csr_valid_i[2]) && ~commit_i[2])
+            csr_ready_o[2] = 1'b0;
+	if ((csr_reg_q.valid[1] || csr_valid_i[3]) && ~commit_i[1])
+            csr_ready_o[1] = 1'b0;
+	if ((csr_reg_q.valid[0] || csr_valid_i[0]) && ~commit_i[0])
+            csr_ready_o[0] = 1'b0;
         // if we got a valid from the scoreboard
         // store the CSR address
-        if (csr_valid_i) begin
-            csr_reg_n.csr_address = operand_b_i[11:0];
-            csr_reg_n.valid       = 1'b1;
+        if (csr_valid_i[3]) begin
+            csr_reg_n[3].csr_address = operand_b_i[3][11:0];
+            csr_reg_n[3].valid       = 1'b1;
+        end
+	if (csr_valid_i[2]) begin
+            csr_reg_n[2].csr_address = operand_b_i[2][11:0];
+            csr_reg_n[2].valid       = 1'b1;
+        end
+	if (csr_valid_i[1]) begin
+            csr_reg_n[1].csr_address = operand_b_i[1][11:0];
+            csr_reg_n[1].valid       = 1'b1;
+        end
+	if (csr_valid_i[0]) begin
+            csr_reg_n[0].csr_address = operand_b_i[0][11:0];
+            csr_reg_n[0].valid       = 1'b1;
         end
         // if we get a commit and no new valid instruction -> clear the valid bit
-        if (commit_i && ~csr_valid_i) begin
-            csr_reg_n.valid       = 1'b0;
+        if (commit_i[3] && ~csr_valid_i[3]) begin
+            csr_reg_n[3].valid       = 1'b0;
+        end
+	if (commit_i[2] && ~csr_valid_i[2]) begin
+            csr_reg_n[2].valid       = 1'b0;
+        end
+ 	if (commit_i[1] && ~csr_valid_i[1]) begin
+            csr_reg_n[1].valid       = 1'b0;
+        end
+	if (commit_i[0] && ~csr_valid_i[0]) begin
+            csr_reg_n[0].valid       = 1'b0;
         end
         // clear the buffer if we flushed
         if (flush_i)
-            csr_reg_n.valid       = 1'b0;
+            csr_reg_n[3:0].valid       = 4'b0;
     end
     // sequential process
     always_ff @(posedge clk_i or negedge rst_ni) begin
         if(~rst_ni) begin
-            csr_reg_q <= '{default: 0};
+            csr_reg_q[3:0] <= '{default: 0};
         end else begin
-            csr_reg_q <= csr_reg_n;
+            csr_reg_q[3:0] <= csr_reg_n[3:0];
         end
     end
 
