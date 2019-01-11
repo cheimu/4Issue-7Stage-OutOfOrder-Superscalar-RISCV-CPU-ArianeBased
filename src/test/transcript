@@ -1,0 +1,811 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do connection.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:37:24 on May 30,2018
+# vlog -reportprogress 300 connect.sv "+incdir+" ../test.svh 
+# ** Error: (vlog-7) Failed to open design unit file "connect.sv" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 15:37:24 on May 30,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./connection.do line 4
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "connect.sv" +incdir+ "../test.svh""
+do connection.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:38:03 on May 30,2018
+# vlog -reportprogress 300 connection.sv "+incdir+" ../test.svh 
+# ** Error: connection.sv(1): Cannot open `include file "/test.svh".
+# ** Warning: connection.sv(1): (vlog-2283) Extra semicolon in $unit (global) scope.
+# ** Error: (vlog-13069) connection.sv(13): near "branch_predict_i": syntax error, unexpected IDENTIFIER, expecting ')'.
+# ** Error: ../test.svh(57): 'branchpredict_sbe_t' already declared as a non-typedef
+# ** Error: (vlog-13069) ../test.svh(124): near "branchpredict_sbe_t": syntax error, unexpected IDENTIFIER.
+# ** Error: (vlog-13069) ../test.svh(127): near "}": syntax error, unexpected '}', expecting class.
+# End time: 15:38:03 on May 30,2018, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 1
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./connection.do line 4
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "connection.sv" +incdir+ "../test.svh""
+do connection.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:38:32 on May 30,2018
+# vlog -reportprogress 300 connection.sv "+incdir+" ../test.svh 
+# -- Compiling package connection_sv_unit
+# -- Compiling module if_stage
+# -- Compiling module pcgen_stage
+# -- Compiling module id_stage
+# -- Compiling module reservation_station
+# -- Compiling module issue_read_operands
+# -- Compiling module ex_stage
+# -- Compiling module commit_stage
+# -- Compiling module csr_regfile
+# -- Compiling module controller
+# -- Compiling module rename_stage
+# 
+# Top level modules:
+# 	if_stage
+# 	pcgen_stage
+# 	id_stage
+# 	reservation_station
+# 	issue_read_operands
+# 	ex_stage
+# 	commit_stage
+# 	csr_regfile
+# 	controller
+# 	rename_stage
+# End time: 15:38:32 on May 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:38:32 on May 30,2018
+# vlog -reportprogress 300 ../ariane.sv "+incdir+" ../test.svh 
+# ** Error: (vlog-13069) ../ariane.sv(9): near "input": syntax error, unexpected input, expecting ')'.
+# End time: 15:38:32 on May 30,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./connection.do line 5
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "../ariane.sv" +incdir+ "../test.svh""
+do connection.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:39:15 on May 30,2018
+# vlog -reportprogress 300 connection.sv "+incdir+" ../test.svh 
+# -- Compiling package connection_sv_unit
+# -- Compiling module if_stage
+# -- Compiling module pcgen_stage
+# -- Compiling module id_stage
+# -- Compiling module reservation_station
+# -- Compiling module issue_read_operands
+# -- Compiling module ex_stage
+# -- Compiling module commit_stage
+# -- Compiling module csr_regfile
+# -- Compiling module controller
+# -- Compiling module rename_stage
+# 
+# Top level modules:
+# 	if_stage
+# 	pcgen_stage
+# 	id_stage
+# 	reservation_station
+# 	issue_read_operands
+# 	ex_stage
+# 	commit_stage
+# 	csr_regfile
+# 	controller
+# 	rename_stage
+# End time: 15:39:16 on May 30,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:39:16 on May 30,2018
+# vlog -reportprogress 300 ../ariane.sv "+incdir+" ../test.svh 
+# ** Error: (vlog-13069) ../ariane.sv(112): near "logic": syntax error, unexpected "SystemVerilog keyword 'logic'", expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+# ** Error (suppressible): ../ariane.sv(245): (vlog-2388) 'pc_debug_pcgen' already declared in this scope (ariane).
+# ** Error (suppressible): ../ariane.sv(246): (vlog-2388) 'set_pc_debug' already declared in this scope (ariane).
+# ** Error (suppressible): ../ariane.sv(248): (vlog-2388) 'gpr_req_debug_issue' already declared in this scope (ariane).
+# ** Error (suppressible): ../ariane.sv(249): (vlog-2388) 'gpr_addr_debug_issue' already declared in this scope (ariane).
+# ** Error (suppressible): ../ariane.sv(250): (vlog-2388) 'gpr_we_debug_issue' already declared in this scope (ariane).
+# ** Error (suppressible): ../ariane.sv(251): (vlog-2388) 'gpr_wdata_debug_issue' already declared in this scope (ariane).
+# ** Error (suppressible): ../ariane.sv(252): (vlog-2388) 'gpr_rdata_debug_issue' already declared in this scope (ariane).
+# ** Error (suppressible): ../ariane.sv(254): (vlog-2388) 'csr_req_debug_csr' already declared in this scope (ariane).
+# ** Error (suppressible): ../ariane.sv(255): (vlog-2388) 'csr_addr_debug_csr' already declared in this scope (ariane).
+# ** Error (suppressible): ../ariane.sv(256): (vlog-2388) 'csr_we_debug_csr' already declared in this scope (ariane).
+# ** Error (suppressible): ../ariane.sv(257): (vlog-2388) 'csr_wdata_debug_csr' already declared in this scope (ariane).
+# ** Error (suppressible): ../ariane.sv(258): (vlog-2388) 'csr_rdata_debug_csr' already declared in this scope (ariane).
+# ** Error: (vlog-13069) ../ariane.sv(551): near ".": syntax error, unexpected '.', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER or '*'.
+# ** Error: ../test.svh(2): 'NR_SB_ENTRIES' already declared in this scope.
+# ** Error: ../test.svh(3): 'TRANS_ID_BITS' already declared in this scope.
+# ** Error: ../test.svh(5): 'NR_WB_PORTS' already declared in this scope.
+# ** Error: ../test.svh(6): 'ASID_WIDTH' already declared in this scope.
+# ** Error: ../test.svh(7): 'BTB_ENTRIES' already declared in this scope.
+# ** Error: ../test.svh(8): 'BITS_SATURATION_COUNTER' already declared in this scope.
+# ** Error: ../test.svh(10): 'NR_FU' already declared in this scope.
+# ** Error: ../test.svh(19): 'ISA_CODE' already declared in this scope.
+# ** Error: ../test.svh(31): Typedef 'exception_t' multiply defined.
+# ** Error: ../test.svh(46): Typedef 'branchpredict_t' multiply defined.
+# ** Error: ../test.svh(57): Typedef 'branchpredict_sbe_t' multiply defined.
+# ** Error: ../test.svh(60): Enum literal name 'NONE' already exists.
+# ** Error: ../test.svh(60): Enum literal name 'LOAD' already exists.
+# ** Error: ../test.svh(60): Enum literal name 'STORE' already exists.
+# ** Error: ../test.svh(60): Enum literal name 'ALU' already exists.
+# ** Error: ../test.svh(60): Enum literal name 'CTRL_FLOW' already exists.
+# ** Error: ../test.svh(60): Enum literal name 'MULT' already exists.
+# ** Error: ../test.svh(61): Enum literal name 'CSR' already exists.
+# ** Error: ../test.svh(61): Typedef 'fu_t' multiply defined.
+# ** Error: ../test.svh(63): 'EXC_OFF_RST' already declared in this scope.
+# ** Error: ../test.svh(69): Enum literal name 'ADD' already exists.
+# ** Error: ../test.svh(69): Enum literal name 'SUB' already exists.
+# ** Error: ../test.svh(69): Enum literal name 'ADDW' already exists.
+# ** Error: ../test.svh(69): Enum literal name 'SUBW' already exists.
+# ** Error: ../test.svh(71): Enum literal name 'XORL' already exists.
+# ** Error: ../test.svh(71): Enum literal name 'ORL' already exists.
+# ** Error: ../test.svh(71): Enum literal name 'ANDL' already exists.
+# ** Error: ../test.svh(73): Enum literal name 'SRA' already exists.
+# ** Error: ../test.svh(73): Enum literal name 'SRL' already exists.
+# ** Error: ../test.svh(73): Enum literal name 'SLL' already exists.
+# ** Error: ../test.svh(73): Enum literal name 'SRLW' already exists.
+# ** Error: ../test.svh(73): Enum literal name 'SLLW' already exists.
+# ** Error: ../test.svh(73): Enum literal name 'SRAW' already exists.
+# ** Error: ../test.svh(75): Enum literal name 'LTS' already exists.
+# ** Error: ../test.svh(75): Enum literal name 'LTU' already exists.
+# ** Error: ../test.svh(75): Enum literal name 'GES' already exists.
+# ** Error: ../test.svh(75): Enum literal name 'GEU' already exists.
+# ** Error: ../test.svh(75): Enum literal name 'EQ' already exists.
+# ** Error: ../test.svh(75): Enum literal name 'NE' already exists.
+# ** Error: ../test.svh(77): Enum literal name 'JALR' already exists.
+# ** Error: ../test.svh(79): Enum literal name 'SLTS' already exists.
+# ** Error: ../test.svh(79): Enum literal name 'SLTU' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'MRET' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'SRET' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'ECALL' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'WFI' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'FENCE' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'FENCE_I' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'SFENCE_VMA' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'CSR_WRITE' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'CSR_READ' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'CSR_SET' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'CSR_CLEAR' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'LD' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'SD' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'LW' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'LWU' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'SW' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'LH' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'LHU' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'SH' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'LB' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'SB' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'LBU' already exists.
+# ** Error: ../test.svh(85): Enum literal name 'AMO_LRW' already exists.
+# ** Error: ../test.svh(85): Enum literal name 'AMO_LRD' already exists.
+# ** Error: ../test.svh(85): Enum literal name 'AMO_SCW' already exists.
+# ** Error: ../test.svh(85): Enum literal name 'AMO_SCD' already exists.
+# ** Error: ../test.svh(86): Enum literal name 'AMO_SWAPW' already exists.
+# ** Error: ../test.svh(86): Enum literal name 'AMO_ADDW' already exists.
+# ** Error: ../test.svh(86): Enum literal name 'AMO_ANDW' already exists.
+# ** Error: ../test.svh(86): Enum literal name 'AMO_ORW' already exists.
+# ** Error: ../test.svh(86): Enum literal name 'AMO_XORW' already exists.
+# ** Error: ../test.svh(86): Enum literal name 'AMO_MAXW' already exists.
+# ** Error: ../test.svh(86): Enum literal name 'AMO_MAXWU' already exists.
+# ** Error: ../test.svh(86): Enum literal name 'AMO_MINW' already exists.
+# ** Error: ../test.svh(86): Enum literal name 'AMO_MINWU' already exists.
+# ** Error: ../test.svh(87): Enum literal name 'AMO_SWAPD' already exists.
+# ** Error: ../test.svh(87): Enum literal name 'AMO_ADDD' already exists.
+# ** Error: ../test.svh(87): Enum literal name 'AMO_ANDD' already exists.
+# ** Error: ../test.svh(87): Enum literal name 'AMO_ORD' already exists.
+# ** Error: ../test.svh(87): Enum literal name 'AMO_XORD' already exists.
+# ** Error: ../test.svh(87): Enum literal name 'AMO_MAXD' already exists.
+# ** Error: ../test.svh(87): Enum literal name 'AMO_MAXDU' already exists.
+# ** Error: ../test.svh(87): Enum literal name 'AMO_MIND' already exists.
+# ** Error: ../test.svh(87): Enum literal name 'AMO_MINDU' already exists.
+# ** Error: ../test.svh(89): Enum literal name 'MUL' already exists.
+# ** Error: ../test.svh(89): Enum literal name 'MULH' already exists.
+# ** Error: ../test.svh(89): Enum literal name 'MULHU' already exists.
+# ** Error: ../test.svh(89): Enum literal name 'MULHSU' already exists.
+# ** Error: ../test.svh(89): Enum literal name 'MULW' already exists.
+# ** Error: ../test.svh(91): Enum literal name 'DIV' already exists.
+# ** Error: ../test.svh(91): Enum literal name 'DIVU' already exists.
+# ** Error: ../test.svh(91): Enum literal name 'DIVW' already exists.
+# ** Error: ../test.svh(91): Enum literal name 'DIVUW' already exists.
+# ** Error: ../test.svh(91): Enum literal name 'REM' already exists.
+# ** Error: ../test.svh(91): Enum literal name 'REMU' already exists.
+# ** Error: ../test.svh(91): Enum literal name 'REMW' already exists.
+# ** Error: ../test.svh(92): Enum literal name 'REMUW' already exists.
+# ** Error: ../test.svh(92): Typedef 'fu_op' multiply defined.
+# ** Error: ../test.svh(98): 'extract_transfer_size' already exists; must not be redefined as a function.
+# ** Error: ../test.svh(116): Typedef 'lsu_ctrl_t' multiply defined.
+# ** Error: ../test.svh(127): Typedef 'fetch_entry_t' multiply defined.
+# ** Error: ../test.svh(153): Typedef 'scoreboard_entry_t' multiply defined.
+# ** Error: ../test.svh(158): Typedef 'decoded_entry_t' multiply defined.
+# ** Error: ../test.svh(170): Typedef 'rtype_t' multiply defined.
+# ** Error: ../test.svh(178): Typedef 'itype_t' multiply defined.
+# ** Error: ../test.svh(187): Typedef 'stype_t' multiply defined.
+# ** Error: ../test.svh(193): Typedef 'utype_t' multiply defined.
+# ** Error: ../test.svh(201): Typedef 'instruction_t' multiply defined.
+# ** Error: ../test.svh(206): 'OPCODE_SYSTEM' already declared in this scope.
+# ** Error: ../test.svh(207): 'OPCODE_FENCE' already declared in this scope.
+# ** Error: ../test.svh(208): 'OPCODE_OP' already declared in this scope.
+# ** Error: ../test.svh(209): 'OPCODE_OP32' already declared in this scope.
+# ** Error: ../test.svh(210): 'OPCODE_OPIMM' already declared in this scope.
+# ** Error: ../test.svh(211): 'OPCODE_OPIMM32' already declared in this scope.
+# ** Error: ../test.svh(212): 'OPCODE_STORE' already declared in this scope.
+# ** Error: ../test.svh(213): 'OPCODE_LOAD' already declared in this scope.
+# ** Error: ../test.svh(214): 'OPCODE_BRANCH' already declared in this scope.
+# ** Error: ../test.svh(215): 'OPCODE_JALR' already declared in this scope.
+# ** Error: ../test.svh(216): 'OPCODE_JAL' already declared in this scope.
+# ** Error: ../test.svh(217): 'OPCODE_AUIPC' already declared in this scope.
+# ** Error: ../test.svh(218): 'OPCODE_LUI' already declared in this scope.
+# ** Error: ../test.svh(219): 'OPCODE_AMO' already declared in this scope.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_NONE' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_LR' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_SC' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_SWAP' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_ADD' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_AND' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_OR' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_XOR' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_MAX' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_MAXU' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_MIN' already exists.
+# ** Error: ../test.svh(226): Enum literal name 'AMO_MINU' already exists.
+# ** Error: ../test.svh(226): Typedef 'amo_t' multiply defined.
+# ** Error: ../test.svh(232): Enum literal name 'PRIV_LVL_M' already exists.
+# ** Error: ../test.svh(233): Enum literal name 'PRIV_LVL_S' already exists.
+# ** Error: ../test.svh(235): Enum literal name 'PRIV_LVL_U' already exists.
+# ** Error: ../test.svh(235): Typedef 'priv_lvl_t' multiply defined.
+# ** Error: ../test.svh(250): Typedef 'pte_t' multiply defined.
+# ** Error: ../test.svh(254): 'PPN4K_WIDTH' already declared in this scope.
+# ** Error: ../test.svh(259): 'INSTR_ADDR_MISALIGNED' already declared in this scope.
+# ** Error: ../test.svh(260): 'INSTR_ACCESS_FAULT' already declared in this scope.
+# ** Error: ../test.svh(261): 'ILLEGAL_INSTR' already declared in this scope.
+# ** Error: ../test.svh(262): 'BREAKPOINT' already declared in this scope.
+# ** Error: ../test.svh(263): 'LD_ADDR_MISALIGNED' already declared in this scope.
+# ** Error: ../test.svh(264): 'LD_ACCESS_FAULT' already declared in this scope.
+# ** Error: ../test.svh(265): 'ST_ADDR_MISALIGNED' already declared in this scope.
+# ** Error: ../test.svh(266): 'ST_ACCESS_FAULT' already declared in this scope.
+# ** Error: ../test.svh(267): 'ENV_CALL_UMODE' already declared in this scope.
+# ** Error: ../test.svh(268): 'ENV_CALL_SMODE' already declared in this scope.
+# ** Error: ../test.svh(269): 'ENV_CALL_MMODE' already declared in this scope.
+# ** Error: ../test.svh(270): 'INSTR_PAGE_FAULT' already declared in this scope.
+# ** Error: ../test.svh(271): 'LOAD_PAGE_FAULT' already declared in this scope.
+# ** Error: ../test.svh(272): 'STORE_PAGE_FAULT' already declared in this scope.
+# ** Error: ../test.svh(274): 'S_SW_INTERRUPT' already declared in this scope.
+# ** Error: ../test.svh(275): 'M_SW_INTERRUPT' already declared in this scope.
+# ** Error: ../test.svh(276): 'S_TIMER_INTERRUPT' already declared in this scope.
+# ** Error: ../test.svh(277): 'M_TIMER_INTERRUPT' already declared in this scope.
+# ** Error: ../test.svh(278): 'S_EXT_INTERRUPT' already declared in this scope.
+# ** Error: ../test.svh(279): 'M_EXT_INTERRUPT' already declared in this scope.
+# ** Error: ../test.svh(284): 'PERF_L1_ICACHE_MISS' already declared in this scope.
+# ** Error: ../test.svh(285): 'PERF_L1_DCACHE_MISS' already declared in this scope.
+# ** Error: ../test.svh(286): 'PERF_ITLB_MISS' already declared in this scope.
+# ** Error: ../test.svh(287): 'PERF_DTLB_MISS' already declared in this scope.
+# ** Error: ../test.svh(288): 'PERF_LOAD' already declared in this scope.
+# ** Error: ../test.svh(289): 'PERF_STORE' already declared in this scope.
+# ** Error: ../test.svh(290): 'PERF_EXCEPTION' already declared in this scope.
+# ** Error: ../test.svh(291): 'PERF_EXCEPTION_RET' already declared in this scope.
+# ** Error: ../test.svh(292): 'PERF_BRANCH_JUMP' already declared in this scope.
+# ** Error: ../test.svh(293): 'PERF_CALL' already declared in this scope.
+# ** Error: ../test.svh(294): 'PERF_RET' already declared in this scope.
+# ** Error: ../test.svh(295): 'PERF_MIS_PREDICT' already declared in this scope.
+# ** Error: ../test.svh(302): Enum literal name 'CSR_SSTATUS' already exists.
+# ** Error: ../test.svh(303): Enum literal name 'CSR_SIE' already exists.
+# ** Error: ../test.svh(304): Enum literal name 'CSR_STVEC' already exists.
+# ** Error: ../test.svh(305): Enum literal name 'CSR_SCOUNTEREN' already exists.
+# ** Error: ../test.svh(306): Enum literal name 'CSR_SSCRATCH' already exists.
+# ** Error: ../test.svh(307): Enum literal name 'CSR_SEPC' already exists.
+# ** Error: ../test.svh(308): Enum literal name 'CSR_SCAUSE' already exists.
+# ** Error: ../test.svh(309): Enum literal name 'CSR_STVAL' already exists.
+# ** Error: ../test.svh(310): Enum literal name 'CSR_SIP' already exists.
+# ** Error: ../test.svh(311): Enum literal name 'CSR_SATP' already exists.
+# ** Error: ../test.svh(313): Enum literal name 'CSR_MSTATUS' already exists.
+# ** Error: ../test.svh(314): Enum literal name 'CSR_MISA' already exists.
+# ** Error: ../test.svh(315): Enum literal name 'CSR_MEDELEG' already exists.
+# ** Error: ../test.svh(316): Enum literal name 'CSR_MIDELEG' already exists.
+# ** Error: ../test.svh(317): Enum literal name 'CSR_MIE' already exists.
+# ** Error: ../test.svh(318): Enum literal name 'CSR_MTVEC' already exists.
+# ** Error: ../test.svh(319): Enum literal name 'CSR_MCOUNTEREN' already exists.
+# ** Error: ../test.svh(320): Enum literal name 'CSR_MSCRATCH' already exists.
+# ** Error: ../test.svh(321): Enum literal name 'CSR_MEPC' already exists.
+# ** Error: ../test.svh(322): Enum literal name 'CSR_MCAUSE' already exists.
+# ** Error: ../test.svh(323): Enum literal name 'CSR_MTVAL' already exists.
+# ** Error: ../test.svh(324): Enum literal name 'CSR_MIP' already exists.
+# ** Error: ../test.svh(325): Enum literal name 'CSR_MVENDORID' already exists.
+# ** Error: ../test.svh(326): Enum literal name 'CSR_MARCHID' already exists.
+# ** Error: ../test.svh(327): Enum literal name 'CSR_MIMPID' already exists.
+# ** Error: ../test.svh(328): Enum literal name 'CSR_MHARTID' already exists.
+# ** Error: ../test.svh(329): Enum literal name 'CSR_MCYCLE' already exists.
+# ** Error: ../test.svh(330): Enum literal name 'CSR_MINSTRET' already exists.
+# ** Error: ../test.svh(331): Enum literal name 'CSR_DCACHE' already exists.
+# ** Error: ../test.svh(332): Enum literal name 'CSR_ICACHE' already exists.
+# ** Error: ../test.svh(334): Enum literal name 'CSR_CYCLE' already exists.
+# ** Error: ../test.svh(335): Enum literal name 'CSR_TIME' already exists.
+# ** Error: ../test.svh(336): Enum literal name 'CSR_INSTRET' already exists.
+# ** Error: ../test.svh(338): Enum literal name 'CSR_L1_ICACHE_MISS' already exists.
+# ** Error: ../test.svh(339): Enum literal name 'CSR_L1_DCACHE_MISS' already exists.
+# ** Error: ../test.svh(340): Enum literal name 'CSR_ITLB_MISS' already exists.
+# ** Error: ../test.svh(341): Enum literal name 'CSR_DTLB_MISS' already exists.
+# ** Error: ../test.svh(342): Enum literal name 'CSR_LOAD' already exists.
+# ** Error: ../test.svh(343): Enum literal name 'CSR_STORE' already exists.
+# ** Error: ../test.svh(344): Enum literal name 'CSR_EXCEPTION' already exists.
+# ** Error: ../test.svh(345): Enum literal name 'CSR_EXCEPTION_RET' already exists.
+# ** Error: ../test.svh(346): Enum literal name 'CSR_BRANCH_JUMP' already exists.
+# ** Error: ../test.svh(347): Enum literal name 'CSR_CALL' already exists.
+# ** Error: ../test.svh(348): Enum literal name 'CSR_RET' already exists.
+# ** Error: ../test.svh(350): Enum literal name 'CSR_MIS_PREDICT' already exists.
+# ** Error: ../test.svh(350): Typedef 'csr_reg_t' multiply defined.
+# ** Error: ../test.svh(357): Typedef 'csr_addr_t' multiply defined.
+# ** Error: ../test.svh(362): Typedef 'csr_t' multiply defined.
+# ** Error: ../test.svh(368): Enum literal name 'DBG_CTRL' already exists.
+# ** Error: ../test.svh(369): Enum literal name 'DBG_HIT' already exists.
+# ** Error: ../test.svh(370): Enum literal name 'DBG_IE' already exists.
+# ** Error: ../test.svh(371): Enum literal name 'DBG_CAUSE' already exists.
+# ** Error: ../test.svh(373): Enum literal name 'BP_CTRL0' already exists.
+# ** Error: ../test.svh(374): Enum literal name 'BP_DATA0' already exists.
+# ** Error: ../test.svh(375): Enum literal name 'BP_CTRL1' already exists.
+# ** Error: ../test.svh(376): Enum literal name 'BP_DATA1' already exists.
+# ** Error: ../test.svh(377): Enum literal name 'BP_CTRL2' already exists.
+# ** Error: ../test.svh(378): Enum literal name 'BP_DATA2' already exists.
+# ** Error: ../test.svh(379): Enum literal name 'BP_CTRL3' already exists.
+# ** Error: ../test.svh(380): Enum literal name 'BP_DATA3' already exists.
+# ** Error: ../test.svh(381): Enum literal name 'BP_CTRL4' already exists.
+# ** Error: ../test.svh(382): Enum literal name 'BP_DATA4' already exists.
+# ** Error: ../test.svh(383): Enum literal name 'BP_CTRL5' already exists.
+# ** Error: ../test.svh(384): Enum literal name 'BP_DATA5' already exists.
+# ** Error: ../test.svh(385): Enum literal name 'BP_CTRL6' already exists.
+# ** Error: ../test.svh(386): Enum literal name 'BP_DATA6' already exists.
+# ** Error: ../test.svh(387): Enum literal name 'BP_CTRL7' already exists.
+# ** Error: ../test.svh(388): Enum literal name 'BP_DATA7' already exists.
+# ** Error: ../test.svh(390): Enum literal name 'DBG_NPC' already exists.
+# ** Error: ../test.svh(391): Enum literal name 'DBG_PPC' already exists.
+# ** Error: ../test.svh(392): Enum literal name 'DBG_GPR' already exists.
+# ** Error: ../test.svh(395): Enum literal name 'DBG_CSR_U0' already exists.
+# ** Error: ../test.svh(396): Enum literal name 'DBG_CSR_U1' already exists.
+# ** Error: ../test.svh(397): Enum literal name 'DBG_CSR_S0' already exists.
+# ** Error: ../test.svh(398): Enum literal name 'DBG_CSR_S1' already exists.
+# ** Error: ../test.svh(399): Enum literal name 'DBG_CSR_H0' already exists.
+# ** Error: ../test.svh(400): Enum literal name 'DBG_CSR_H1' already exists.
+# ** Error: ../test.svh(401): Enum literal name 'DBG_CSR_M0' already exists.
+# ** Error: ../test.svh(403): Enum literal name 'DBG_CSR_M1' already exists.
+# ** Error: ../test.svh(403): Typedef 'debug_reg_t' multiply defined.
+# ** Error: ../test.svh(408): 'sext32' already exists; must not be redefined as a function.
+# End time: 15:39:17 on May 30,2018, Elapsed time: 0:00:01
+# Errors: 270, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./connection.do line 5
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "../ariane.sv" +incdir+ "../test.svh""
+do connection.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:40:36 on May 30,2018
+# vlog -reportprogress 300 connection.sv "+incdir+" ../test.svh 
+# -- Compiling package connection_sv_unit
+# -- Compiling module if_stage
+# -- Compiling module pcgen_stage
+# -- Compiling module id_stage
+# -- Compiling module reservation_station
+# -- Compiling module issue_read_operands
+# -- Compiling module ex_stage
+# -- Compiling module commit_stage
+# -- Compiling module csr_regfile
+# -- Compiling module controller
+# -- Compiling module rename_stage
+# 
+# Top level modules:
+# 	if_stage
+# 	pcgen_stage
+# 	id_stage
+# 	reservation_station
+# 	issue_read_operands
+# 	ex_stage
+# 	commit_stage
+# 	csr_regfile
+# 	controller
+# 	rename_stage
+# End time: 15:40:36 on May 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:40:36 on May 30,2018
+# vlog -reportprogress 300 ../ariane.sv "+incdir+" ../test.svh 
+# ** Error: (vlog-13069) ../ariane.sv(534): near ".": syntax error, unexpected '.', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER or '*'.
+# ** Error: ../test.svh(2): 'NR_SB_ENTRIES' already declared in this scope.
+# ** Error: ../test.svh(3): 'TRANS_ID_BITS' already declared in this scope.
+# ** Error: ../test.svh(5): 'NR_WB_PORTS' already declared in this scope.
+# ** Error: ../test.svh(6): 'ASID_WIDTH' already declared in this scope.
+# ** Error: ../test.svh(7): 'BTB_ENTRIES' already declared in this scope.
+# ** Error: ../test.svh(8): 'BITS_SATURATION_COUNTER' already declared in this scope.
+# ** Error: ../test.svh(10): 'NR_FU' already declared in this scope.
+# ** Error: ../test.svh(19): 'ISA_CODE' already declared in this scope.
+# ** Error: ../test.svh(31): Typedef 'exception_t' multiply defined.
+# ** Error: ../test.svh(46): Typedef 'branchpredict_t' multiply defined.
+# ** Error: ../test.svh(57): Typedef 'branchpredict_sbe_t' multiply defined.
+# ** Error: ../test.svh(60): Enum literal name 'NONE' already exists.
+# ** Error: ../test.svh(60): Enum literal name 'LOAD' already exists.
+# ** Error: ../test.svh(60): Enum literal name 'STORE' already exists.
+# ** Error: ../test.svh(60): Enum literal name 'ALU' already exists.
+# ** Error: ../test.svh(60): Enum literal name 'CTRL_FLOW' already exists.
+# ** Error: ../test.svh(60): Enum literal name 'MULT' already exists.
+# ** Error: ../test.svh(61): Enum literal name 'CSR' already exists.
+# ** Error: ../test.svh(61): Typedef 'fu_t' multiply defined.
+# ** Error: ../test.svh(63): 'EXC_OFF_RST' already declared in this scope.
+# ** Error: ../test.svh(69): Enum literal name 'ADD' already exists.
+# ** Error: ../test.svh(69): Enum literal name 'SUB' already exists.
+# ** Error: ../test.svh(69): Enum literal name 'ADDW' already exists.
+# ** Error: ../test.svh(69): Enum literal name 'SUBW' already exists.
+# ** Error: ../test.svh(71): Enum literal name 'XORL' already exists.
+# ** Error: ../test.svh(71): Enum literal name 'ORL' already exists.
+# ** Error: ../test.svh(71): Enum literal name 'ANDL' already exists.
+# ** Error: ../test.svh(73): Enum literal name 'SRA' already exists.
+# ** Error: ../test.svh(73): Enum literal name 'SRL' already exists.
+# ** Error: ../test.svh(73): Enum literal name 'SLL' already exists.
+# ** Error: ../test.svh(73): Enum literal name 'SRLW' already exists.
+# ** Error: ../test.svh(73): Enum literal name 'SLLW' already exists.
+# ** Error: ../test.svh(73): Enum literal name 'SRAW' already exists.
+# ** Error: ../test.svh(75): Enum literal name 'LTS' already exists.
+# ** Error: ../test.svh(75): Enum literal name 'LTU' already exists.
+# ** Error: ../test.svh(75): Enum literal name 'GES' already exists.
+# ** Error: ../test.svh(75): Enum literal name 'GEU' already exists.
+# ** Error: ../test.svh(75): Enum literal name 'EQ' already exists.
+# ** Error: ../test.svh(75): Enum literal name 'NE' already exists.
+# ** Error: ../test.svh(77): Enum literal name 'JALR' already exists.
+# ** Error: ../test.svh(79): Enum literal name 'SLTS' already exists.
+# ** Error: ../test.svh(79): Enum literal name 'SLTU' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'MRET' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'SRET' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'ECALL' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'WFI' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'FENCE' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'FENCE_I' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'SFENCE_VMA' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'CSR_WRITE' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'CSR_READ' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'CSR_SET' already exists.
+# ** Error: ../test.svh(81): Enum literal name 'CSR_CLEAR' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'LD' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'SD' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'LW' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'LWU' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'SW' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'LH' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'LHU' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'SH' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'LB' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'SB' already exists.
+# ** Error: ../test.svh(83): Enum literal name 'LBU' already exists.
+# ** Error: ../test.svh(85): Enum literal name 'AMO_LRW' already exists.
+# ** Error: ../test.svh(85): Enum literal name 'AMO_LRD' already exists.
+# ** Error: ../test.svh(85): Enum literal name 'AMO_SCW' already exists.
+# ** Error: ../test.svh(85): Enum literal name 'AMO_SCD' already exists.
+# ** Error: ../test.svh(86): Enum literal name 'AMO_SWAPW' already exists.
+# ** Error: ../test.svh(86): Enum literal name 'AMO_ADDW' already exists.
+# ** Error: ../test.svh(86): Enum literal name 'AMO_ANDW' already exists.
+# ** Error: ../test.svh(86): Enum literal name 'AMO_ORW' already exists.
+# ** Error: ../test.svh(86): Enum literal name 'AMO_XORW' already exists.
+# ** Error: ../test.svh(86): Enum literal name 'AMO_MAXW' already exists.
+# ** Error: ../test.svh(86): Enum literal name 'AMO_MAXWU' already exists.
+# ** Error: ../test.svh(86): Enum literal name 'AMO_MINW' already exists.
+# ** Error: ../test.svh(86): Enum literal name 'AMO_MINWU' already exists.
+# ** Error: ../test.svh(87): Enum literal name 'AMO_SWAPD' already exists.
+# ** Error: ../test.svh(87): Enum literal name 'AMO_ADDD' already exists.
+# ** Error: ../test.svh(87): Enum literal name 'AMO_ANDD' already exists.
+# ** Error: ../test.svh(87): Enum literal name 'AMO_ORD' already exists.
+# ** Error: ../test.svh(87): Enum literal name 'AMO_XORD' already exists.
+# ** Error: ../test.svh(87): Enum literal name 'AMO_MAXD' already exists.
+# ** Error: ../test.svh(87): Enum literal name 'AMO_MAXDU' already exists.
+# ** Error: ../test.svh(87): Enum literal name 'AMO_MIND' already exists.
+# ** Error: ../test.svh(87): Enum literal name 'AMO_MINDU' already exists.
+# ** Error: ../test.svh(89): Enum literal name 'MUL' already exists.
+# ** Error: ../test.svh(89): Enum literal name 'MULH' already exists.
+# ** Error: ../test.svh(89): Enum literal name 'MULHU' already exists.
+# ** Error: ../test.svh(89): Enum literal name 'MULHSU' already exists.
+# ** Error: ../test.svh(89): Enum literal name 'MULW' already exists.
+# ** Error: ../test.svh(91): Enum literal name 'DIV' already exists.
+# ** Error: ../test.svh(91): Enum literal name 'DIVU' already exists.
+# ** Error: ../test.svh(91): Enum literal name 'DIVW' already exists.
+# ** Error: ../test.svh(91): Enum literal name 'DIVUW' already exists.
+# ** Error: ../test.svh(91): Enum literal name 'REM' already exists.
+# ** Error: ../test.svh(91): Enum literal name 'REMU' already exists.
+# ** Error: ../test.svh(91): Enum literal name 'REMW' already exists.
+# ** Error: ../test.svh(92): Enum literal name 'REMUW' already exists.
+# ** Error: ../test.svh(92): Typedef 'fu_op' multiply defined.
+# ** Error: ../test.svh(98): 'extract_transfer_size' already exists; must not be redefined as a function.
+# ** Error: ../test.svh(116): Typedef 'lsu_ctrl_t' multiply defined.
+# ** Error: ../test.svh(127): Typedef 'fetch_entry_t' multiply defined.
+# ** Error: ../test.svh(153): Typedef 'scoreboard_entry_t' multiply defined.
+# ** Error: ../test.svh(158): Typedef 'decoded_entry_t' multiply defined.
+# ** Error: ../test.svh(170): Typedef 'rtype_t' multiply defined.
+# ** Error: ../test.svh(178): Typedef 'itype_t' multiply defined.
+# ** Error: ../test.svh(187): Typedef 'stype_t' multiply defined.
+# ** Error: ../test.svh(193): Typedef 'utype_t' multiply defined.
+# ** Error: ../test.svh(201): Typedef 'instruction_t' multiply defined.
+# ** Error: ../test.svh(206): 'OPCODE_SYSTEM' already declared in this scope.
+# ** Error: ../test.svh(207): 'OPCODE_FENCE' already declared in this scope.
+# ** Error: ../test.svh(208): 'OPCODE_OP' already declared in this scope.
+# ** Error: ../test.svh(209): 'OPCODE_OP32' already declared in this scope.
+# ** Error: ../test.svh(210): 'OPCODE_OPIMM' already declared in this scope.
+# ** Error: ../test.svh(211): 'OPCODE_OPIMM32' already declared in this scope.
+# ** Error: ../test.svh(212): 'OPCODE_STORE' already declared in this scope.
+# ** Error: ../test.svh(213): 'OPCODE_LOAD' already declared in this scope.
+# ** Error: ../test.svh(214): 'OPCODE_BRANCH' already declared in this scope.
+# ** Error: ../test.svh(215): 'OPCODE_JALR' already declared in this scope.
+# ** Error: ../test.svh(216): 'OPCODE_JAL' already declared in this scope.
+# ** Error: ../test.svh(217): 'OPCODE_AUIPC' already declared in this scope.
+# ** Error: ../test.svh(218): 'OPCODE_LUI' already declared in this scope.
+# ** Error: ../test.svh(219): 'OPCODE_AMO' already declared in this scope.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_NONE' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_LR' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_SC' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_SWAP' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_ADD' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_AND' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_OR' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_XOR' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_MAX' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_MAXU' already exists.
+# ** Error: ../test.svh(225): Enum literal name 'AMO_MIN' already exists.
+# ** Error: ../test.svh(226): Enum literal name 'AMO_MINU' already exists.
+# ** Error: ../test.svh(226): Typedef 'amo_t' multiply defined.
+# ** Error: ../test.svh(232): Enum literal name 'PRIV_LVL_M' already exists.
+# ** Error: ../test.svh(233): Enum literal name 'PRIV_LVL_S' already exists.
+# ** Error: ../test.svh(235): Enum literal name 'PRIV_LVL_U' already exists.
+# ** Error: ../test.svh(235): Typedef 'priv_lvl_t' multiply defined.
+# ** Error: ../test.svh(250): Typedef 'pte_t' multiply defined.
+# ** Error: ../test.svh(254): 'PPN4K_WIDTH' already declared in this scope.
+# ** Error: ../test.svh(259): 'INSTR_ADDR_MISALIGNED' already declared in this scope.
+# ** Error: ../test.svh(260): 'INSTR_ACCESS_FAULT' already declared in this scope.
+# ** Error: ../test.svh(261): 'ILLEGAL_INSTR' already declared in this scope.
+# ** Error: ../test.svh(262): 'BREAKPOINT' already declared in this scope.
+# ** Error: ../test.svh(263): 'LD_ADDR_MISALIGNED' already declared in this scope.
+# ** Error: ../test.svh(264): 'LD_ACCESS_FAULT' already declared in this scope.
+# ** Error: ../test.svh(265): 'ST_ADDR_MISALIGNED' already declared in this scope.
+# ** Error: ../test.svh(266): 'ST_ACCESS_FAULT' already declared in this scope.
+# ** Error: ../test.svh(267): 'ENV_CALL_UMODE' already declared in this scope.
+# ** Error: ../test.svh(268): 'ENV_CALL_SMODE' already declared in this scope.
+# ** Error: ../test.svh(269): 'ENV_CALL_MMODE' already declared in this scope.
+# ** Error: ../test.svh(270): 'INSTR_PAGE_FAULT' already declared in this scope.
+# ** Error: ../test.svh(271): 'LOAD_PAGE_FAULT' already declared in this scope.
+# ** Error: ../test.svh(272): 'STORE_PAGE_FAULT' already declared in this scope.
+# ** Error: ../test.svh(274): 'S_SW_INTERRUPT' already declared in this scope.
+# ** Error: ../test.svh(275): 'M_SW_INTERRUPT' already declared in this scope.
+# ** Error: ../test.svh(276): 'S_TIMER_INTERRUPT' already declared in this scope.
+# ** Error: ../test.svh(277): 'M_TIMER_INTERRUPT' already declared in this scope.
+# ** Error: ../test.svh(278): 'S_EXT_INTERRUPT' already declared in this scope.
+# ** Error: ../test.svh(279): 'M_EXT_INTERRUPT' already declared in this scope.
+# ** Error: ../test.svh(284): 'PERF_L1_ICACHE_MISS' already declared in this scope.
+# ** Error: ../test.svh(285): 'PERF_L1_DCACHE_MISS' already declared in this scope.
+# ** Error: ../test.svh(286): 'PERF_ITLB_MISS' already declared in this scope.
+# ** Error: ../test.svh(287): 'PERF_DTLB_MISS' already declared in this scope.
+# ** Error: ../test.svh(288): 'PERF_LOAD' already declared in this scope.
+# ** Error: ../test.svh(289): 'PERF_STORE' already declared in this scope.
+# ** Error: ../test.svh(290): 'PERF_EXCEPTION' already declared in this scope.
+# ** Error: ../test.svh(291): 'PERF_EXCEPTION_RET' already declared in this scope.
+# ** Error: ../test.svh(292): 'PERF_BRANCH_JUMP' already declared in this scope.
+# ** Error: ../test.svh(293): 'PERF_CALL' already declared in this scope.
+# ** Error: ../test.svh(294): 'PERF_RET' already declared in this scope.
+# ** Error: ../test.svh(295): 'PERF_MIS_PREDICT' already declared in this scope.
+# ** Error: ../test.svh(302): Enum literal name 'CSR_SSTATUS' already exists.
+# ** Error: ../test.svh(303): Enum literal name 'CSR_SIE' already exists.
+# ** Error: ../test.svh(304): Enum literal name 'CSR_STVEC' already exists.
+# ** Error: ../test.svh(305): Enum literal name 'CSR_SCOUNTEREN' already exists.
+# ** Error: ../test.svh(306): Enum literal name 'CSR_SSCRATCH' already exists.
+# ** Error: ../test.svh(307): Enum literal name 'CSR_SEPC' already exists.
+# ** Error: ../test.svh(308): Enum literal name 'CSR_SCAUSE' already exists.
+# ** Error: ../test.svh(309): Enum literal name 'CSR_STVAL' already exists.
+# ** Error: ../test.svh(310): Enum literal name 'CSR_SIP' already exists.
+# ** Error: ../test.svh(311): Enum literal name 'CSR_SATP' already exists.
+# ** Error: ../test.svh(313): Enum literal name 'CSR_MSTATUS' already exists.
+# ** Error: ../test.svh(314): Enum literal name 'CSR_MISA' already exists.
+# ** Error: ../test.svh(315): Enum literal name 'CSR_MEDELEG' already exists.
+# ** Error: ../test.svh(316): Enum literal name 'CSR_MIDELEG' already exists.
+# ** Error: ../test.svh(317): Enum literal name 'CSR_MIE' already exists.
+# ** Error: ../test.svh(318): Enum literal name 'CSR_MTVEC' already exists.
+# ** Error: ../test.svh(319): Enum literal name 'CSR_MCOUNTEREN' already exists.
+# ** Error: ../test.svh(320): Enum literal name 'CSR_MSCRATCH' already exists.
+# ** Error: ../test.svh(321): Enum literal name 'CSR_MEPC' already exists.
+# ** Error: ../test.svh(322): Enum literal name 'CSR_MCAUSE' already exists.
+# ** Error: ../test.svh(323): Enum literal name 'CSR_MTVAL' already exists.
+# ** Error: ../test.svh(324): Enum literal name 'CSR_MIP' already exists.
+# ** Error: ../test.svh(325): Enum literal name 'CSR_MVENDORID' already exists.
+# ** Error: ../test.svh(326): Enum literal name 'CSR_MARCHID' already exists.
+# ** Error: ../test.svh(327): Enum literal name 'CSR_MIMPID' already exists.
+# ** Error: ../test.svh(328): Enum literal name 'CSR_MHARTID' already exists.
+# ** Error: ../test.svh(329): Enum literal name 'CSR_MCYCLE' already exists.
+# ** Error: ../test.svh(330): Enum literal name 'CSR_MINSTRET' already exists.
+# ** Error: ../test.svh(331): Enum literal name 'CSR_DCACHE' already exists.
+# ** Error: ../test.svh(332): Enum literal name 'CSR_ICACHE' already exists.
+# ** Error: ../test.svh(334): Enum literal name 'CSR_CYCLE' already exists.
+# ** Error: ../test.svh(335): Enum literal name 'CSR_TIME' already exists.
+# ** Error: ../test.svh(336): Enum literal name 'CSR_INSTRET' already exists.
+# ** Error: ../test.svh(338): Enum literal name 'CSR_L1_ICACHE_MISS' already exists.
+# ** Error: ../test.svh(339): Enum literal name 'CSR_L1_DCACHE_MISS' already exists.
+# ** Error: ../test.svh(340): Enum literal name 'CSR_ITLB_MISS' already exists.
+# ** Error: ../test.svh(341): Enum literal name 'CSR_DTLB_MISS' already exists.
+# ** Error: ../test.svh(342): Enum literal name 'CSR_LOAD' already exists.
+# ** Error: ../test.svh(343): Enum literal name 'CSR_STORE' already exists.
+# ** Error: ../test.svh(344): Enum literal name 'CSR_EXCEPTION' already exists.
+# ** Error: ../test.svh(345): Enum literal name 'CSR_EXCEPTION_RET' already exists.
+# ** Error: ../test.svh(346): Enum literal name 'CSR_BRANCH_JUMP' already exists.
+# ** Error: ../test.svh(347): Enum literal name 'CSR_CALL' already exists.
+# ** Error: ../test.svh(348): Enum literal name 'CSR_RET' already exists.
+# ** Error: ../test.svh(350): Enum literal name 'CSR_MIS_PREDICT' already exists.
+# ** Error: ../test.svh(350): Typedef 'csr_reg_t' multiply defined.
+# ** Error: ../test.svh(357): Typedef 'csr_addr_t' multiply defined.
+# ** Error: ../test.svh(362): Typedef 'csr_t' multiply defined.
+# ** Error: ../test.svh(368): Enum literal name 'DBG_CTRL' already exists.
+# ** Error: ../test.svh(369): Enum literal name 'DBG_HIT' already exists.
+# ** Error: ../test.svh(370): Enum literal name 'DBG_IE' already exists.
+# ** Error: ../test.svh(371): Enum literal name 'DBG_CAUSE' already exists.
+# ** Error: ../test.svh(373): Enum literal name 'BP_CTRL0' already exists.
+# ** Error: ../test.svh(374): Enum literal name 'BP_DATA0' already exists.
+# ** Error: ../test.svh(375): Enum literal name 'BP_CTRL1' already exists.
+# ** Error: ../test.svh(376): Enum literal name 'BP_DATA1' already exists.
+# ** Error: ../test.svh(377): Enum literal name 'BP_CTRL2' already exists.
+# ** Error: ../test.svh(378): Enum literal name 'BP_DATA2' already exists.
+# ** Error: ../test.svh(379): Enum literal name 'BP_CTRL3' already exists.
+# ** Error: ../test.svh(380): Enum literal name 'BP_DATA3' already exists.
+# ** Error: ../test.svh(381): Enum literal name 'BP_CTRL4' already exists.
+# ** Error: ../test.svh(382): Enum literal name 'BP_DATA4' already exists.
+# ** Error: ../test.svh(383): Enum literal name 'BP_CTRL5' already exists.
+# ** Error: ../test.svh(384): Enum literal name 'BP_DATA5' already exists.
+# ** Error: ../test.svh(385): Enum literal name 'BP_CTRL6' already exists.
+# ** Error: ../test.svh(386): Enum literal name 'BP_DATA6' already exists.
+# ** Error: ../test.svh(387): Enum literal name 'BP_CTRL7' already exists.
+# ** Error: ../test.svh(388): Enum literal name 'BP_DATA7' already exists.
+# ** Error: ../test.svh(390): Enum literal name 'DBG_NPC' already exists.
+# ** Error: ../test.svh(391): Enum literal name 'DBG_PPC' already exists.
+# ** Error: ../test.svh(392): Enum literal name 'DBG_GPR' already exists.
+# ** Error: ../test.svh(395): Enum literal name 'DBG_CSR_U0' already exists.
+# ** Error: ../test.svh(396): Enum literal name 'DBG_CSR_U1' already exists.
+# ** Error: ../test.svh(397): Enum literal name 'DBG_CSR_S0' already exists.
+# ** Error: ../test.svh(398): Enum literal name 'DBG_CSR_S1' already exists.
+# ** Error: ../test.svh(399): Enum literal name 'DBG_CSR_H0' already exists.
+# ** Error: ../test.svh(400): Enum literal name 'DBG_CSR_H1' already exists.
+# ** Error: ../test.svh(401): Enum literal name 'DBG_CSR_M0' already exists.
+# ** Error: ../test.svh(403): Enum literal name 'DBG_CSR_M1' already exists.
+# ** Error: ../test.svh(403): Typedef 'debug_reg_t' multiply defined.
+# ** Error: ../test.svh(408): 'sext32' already exists; must not be redefined as a function.
+# End time: 15:40:37 on May 30,2018, Elapsed time: 0:00:01
+# Errors: 257, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./connection.do line 5
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "../ariane.sv" +incdir+ "../test.svh""
+do connection.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:41:07 on May 30,2018
+# vlog -reportprogress 300 connection.sv "+incdir+" ../test.svh 
+# -- Compiling package connection_sv_unit
+# -- Compiling module if_stage
+# -- Compiling module pcgen_stage
+# -- Compiling module id_stage
+# -- Compiling module reservation_station
+# -- Compiling module issue_read_operands
+# -- Compiling module ex_stage
+# -- Compiling module commit_stage
+# -- Compiling module csr_regfile
+# -- Compiling module controller
+# -- Compiling module rename_stage
+# 
+# Top level modules:
+# 	if_stage
+# 	pcgen_stage
+# 	id_stage
+# 	reservation_station
+# 	issue_read_operands
+# 	ex_stage
+# 	commit_stage
+# 	csr_regfile
+# 	controller
+# 	rename_stage
+# End time: 15:41:07 on May 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:41:07 on May 30,2018
+# vlog -reportprogress 300 ../ariane.sv "+incdir+" ../test.svh 
+# -- Compiling package ariane_sv_unit
+# -- Compiling module ariane
+# ** Error: ../ariane.sv(373): Field/method name (is_mis_predict) not in 'resolved_branch'
+# -- Compiling module combine_testbench
+# End time: 15:41:07 on May 30,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./connection.do line 5
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "../ariane.sv" +incdir+ "../test.svh""
+do connection.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:42:11 on May 30,2018
+# vlog -reportprogress 300 connection.sv "+incdir+" ../test.svh 
+# -- Compiling package connection_sv_unit
+# -- Compiling module if_stage
+# -- Compiling module pcgen_stage
+# -- Compiling module id_stage
+# -- Compiling module reservation_station
+# -- Compiling module issue_read_operands
+# -- Compiling module ex_stage
+# -- Compiling module commit_stage
+# -- Compiling module csr_regfile
+# -- Compiling module controller
+# -- Compiling module rename_stage
+# 
+# Top level modules:
+# 	if_stage
+# 	pcgen_stage
+# 	id_stage
+# 	reservation_station
+# 	issue_read_operands
+# 	ex_stage
+# 	commit_stage
+# 	csr_regfile
+# 	controller
+# 	rename_stage
+# End time: 15:42:11 on May 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:42:11 on May 30,2018
+# vlog -reportprogress 300 ../ariane.sv "+incdir+" ../test.svh 
+# -- Compiling package ariane_sv_unit
+# -- Compiling module ariane
+# ** Error: ../ariane.sv(457): Field/method name (is_mis_predict) not in 'resolved_branch'
+# -- Compiling module combine_testbench
+# End time: 15:42:11 on May 30,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./connection.do line 5
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "../ariane.sv" +incdir+ "../test.svh""
+do connection.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:48:49 on May 30,2018
+# vlog -reportprogress 300 connection.sv "+incdir+" ../test.svh 
+# -- Compiling package connection_sv_unit
+# -- Compiling module if_stage
+# -- Compiling module pcgen_stage
+# -- Compiling module id_stage
+# -- Compiling module reservation_station
+# -- Compiling module issue_read_operands
+# -- Compiling module ex_stage
+# -- Compiling module commit_stage
+# -- Compiling module csr_regfile
+# -- Compiling module controller
+# -- Compiling module rename_stage
+# 
+# Top level modules:
+# 	if_stage
+# 	pcgen_stage
+# 	id_stage
+# 	reservation_station
+# 	issue_read_operands
+# 	ex_stage
+# 	commit_stage
+# 	csr_regfile
+# 	controller
+# 	rename_stage
+# End time: 15:48:49 on May 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:48:50 on May 30,2018
+# vlog -reportprogress 300 ../ariane.sv "+incdir+" ../test.svh 
+# -- Compiling package ariane_sv_unit
+# -- Compiling module ariane
+# -- Compiling module combine_testbench
+# 
+# Top level modules:
+# 	ariane
+# 	combine_testbench
+# End time: 15:48:50 on May 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

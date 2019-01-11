@@ -1,0 +1,277 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do pc.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:33:43 on May 25,2018
+# vlog -reportprogress 300 ../../pcgen_stage.sv "+incdir+" ../../test.svh 
+# -- Compiling package pcgen_stage_sv_unit
+# -- Compiling module pcgen_stage
+# -- Compiling module pc_testbench
+# 
+# Top level modules:
+# 	pcgen_stage
+# 	pc_testbench
+# End time: 16:33:43 on May 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:33:43 on May 25,2018
+# vlog -reportprogress 300 ../../btb.sv "+incdir+" ../../test.svh 
+# -- Compiling package btb_sv_unit
+# -- Compiling module btb
+# -- Compiling module btb_testbench
+# 
+# Top level modules:
+# 	btb_testbench
+# End time: 16:33:43 on May 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work pc_testbench 
+# Start time: 16:33:43 on May 25,2018
+# Loading sv_std.std
+# Loading work.pcgen_stage_sv_unit
+# Loading work.pc_testbench
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../../pcgen_stage.sv(255)
+#    Time: 1500 ns  Iteration: 1  Instance: /pc_testbench
+# Break in Module pc_testbench at ../../pcgen_stage.sv line 255
+do pc.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:18 on May 25,2018
+# vlog -reportprogress 300 ../../pcgen_stage.sv "+incdir+" ../../test.svh 
+# -- Compiling package pcgen_stage_sv_unit
+# -- Compiling module pcgen_stage
+# -- Compiling module pc_testbench
+# 
+# Top level modules:
+# 	pcgen_stage
+# 	pc_testbench
+# End time: 16:37:18 on May 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:18 on May 25,2018
+# vlog -reportprogress 300 ../../btb.sv "+incdir+" ../../test.svh 
+# -- Compiling package btb_sv_unit
+# -- Compiling module btb
+# -- Compiling module btb_testbench
+# 
+# Top level modules:
+# 	btb_testbench
+# End time: 16:37:18 on May 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:37:21 on May 25,2018, Elapsed time: 0:03:38
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work pc_testbench 
+# Start time: 16:37:21 on May 25,2018
+# Loading sv_std.std
+# Loading work.pcgen_stage_sv_unit
+# Loading work.pc_testbench
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../../pcgen_stage.sv(267)
+#    Time: 6500 ns  Iteration: 1  Instance: /pc_testbench
+# Break in Module pc_testbench at ../../pcgen_stage.sv line 267
+do pc.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:41:16 on May 25,2018
+# vlog -reportprogress 300 ../../pcgen_stage.sv "+incdir+" ../../test.svh 
+# -- Compiling package pcgen_stage_sv_unit
+# -- Compiling module pcgen_stage
+# -- Compiling module pc_testbench
+# 
+# Top level modules:
+# 	pcgen_stage
+# 	pc_testbench
+# End time: 16:41:16 on May 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:41:16 on May 25,2018
+# vlog -reportprogress 300 ../../btb.sv "+incdir+" ../../test.svh 
+# -- Compiling package btb_sv_unit
+# -- Compiling module btb
+# -- Compiling module btb_testbench
+# 
+# Top level modules:
+# 	btb_testbench
+# End time: 16:41:16 on May 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:41:20 on May 25,2018, Elapsed time: 0:03:59
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work pc_testbench 
+# Start time: 16:41:20 on May 25,2018
+# Loading sv_std.std
+# Loading work.pcgen_stage_sv_unit
+# Loading work.pc_testbench
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../../pcgen_stage.sv(267)
+#    Time: 6500 ns  Iteration: 1  Instance: /pc_testbench
+# Break in Module pc_testbench at ../../pcgen_stage.sv line 267
+do pc.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:46:40 on May 25,2018
+# vlog -reportprogress 300 ../../pcgen_stage.sv "+incdir+" ../../test.svh 
+# -- Compiling package pcgen_stage_sv_unit
+# -- Compiling module pcgen_stage
+# -- Compiling module pc_testbench
+# 
+# Top level modules:
+# 	pc_testbench
+# End time: 16:46:40 on May 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:46:40 on May 25,2018
+# vlog -reportprogress 300 ../../btb.sv "+incdir+" ../../test.svh 
+# -- Compiling package btb_sv_unit
+# -- Compiling module btb
+# -- Compiling module btb_testbench
+# 
+# Top level modules:
+# 	btb_testbench
+# End time: 16:46:40 on May 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:46:41 on May 25,2018, Elapsed time: 0:05:21
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work pc_testbench 
+# Start time: 16:46:41 on May 25,2018
+# Loading sv_std.std
+# Loading work.pcgen_stage_sv_unit
+# Loading work.pc_testbench
+# Loading work.pcgen_stage
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../../pcgen_stage.sv(267)
+#    Time: 6500 ns  Iteration: 1  Instance: /pc_testbench
+# Break in Module pc_testbench at ../../pcgen_stage.sv line 267
+add wave -position 4  sim:/pc_testbench/dut/boot_addr_i
+add wave -position end  sim:/pc_testbench/dut/npc_n
+add wave -position end  sim:/pc_testbench/dut/npc_q
+add wave -position end  sim:/pc_testbench/dut/branch_predict_btb
+add wave -position end  sim:/pc_testbench/dut/resolved_branch_q
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/name/548_project/improved_modules.srcs/sources_1/new/test/pc/pc_wave.do
+do pc.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:47:52 on May 25,2018
+# vlog -reportprogress 300 ../../pcgen_stage.sv "+incdir+" ../../test.svh 
+# -- Compiling package pcgen_stage_sv_unit
+# -- Compiling module pcgen_stage
+# -- Compiling module pc_testbench
+# 
+# Top level modules:
+# 	pc_testbench
+# End time: 16:47:52 on May 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:47:52 on May 25,2018
+# vlog -reportprogress 300 ../../btb.sv "+incdir+" ../../test.svh 
+# -- Compiling package btb_sv_unit
+# -- Compiling module btb
+# -- Compiling module btb_testbench
+# 
+# Top level modules:
+# 	btb_testbench
+# End time: 16:47:52 on May 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:47:53 on May 25,2018, Elapsed time: 0:01:12
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work pc_testbench 
+# Start time: 16:47:53 on May 25,2018
+# Loading sv_std.std
+# Loading work.pcgen_stage_sv_unit
+# Loading work.pc_testbench
+# Loading work.pcgen_stage
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../../pcgen_stage.sv(267)
+#    Time: 6500 ns  Iteration: 1  Instance: /pc_testbench
+# Break in Module pc_testbench at ../../pcgen_stage.sv line 267
+do pc.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:48:36 on May 25,2018
+# vlog -reportprogress 300 ../../pcgen_stage.sv "+incdir+" ../../test.svh 
+# -- Compiling package pcgen_stage_sv_unit
+# -- Compiling module pcgen_stage
+# -- Compiling module pc_testbench
+# 
+# Top level modules:
+# 	pc_testbench
+# End time: 16:48:36 on May 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:48:36 on May 25,2018
+# vlog -reportprogress 300 ../../btb.sv "+incdir+" ../../test.svh 
+# -- Compiling package btb_sv_unit
+# -- Compiling module btb
+# -- Compiling module btb_testbench
+# 
+# Top level modules:
+# 	btb_testbench
+# End time: 16:48:36 on May 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:48:37 on May 25,2018, Elapsed time: 0:00:44
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work pc_testbench 
+# Start time: 16:48:37 on May 25,2018
+# Loading sv_std.std
+# Loading work.pcgen_stage_sv_unit
+# Loading work.pc_testbench
+# Loading work.pcgen_stage
+# Loading work.btb_sv_unit
+# Loading work.btb
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../../pcgen_stage.sv(267)
+#    Time: 6500 ns  Iteration: 1  Instance: /pc_testbench
+# Break in Module pc_testbench at ../../pcgen_stage.sv line 267
+do pc.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:51:05 on May 25,2018
+# vlog -reportprogress 300 ../../pcgen_stage.sv "+incdir+" ../../test.svh 
+# -- Compiling package pcgen_stage_sv_unit
+# -- Compiling module pcgen_stage
+# -- Compiling module pc_testbench
+# 
+# Top level modules:
+# 	pc_testbench
+# End time: 16:51:05 on May 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:51:06 on May 25,2018
+# vlog -reportprogress 300 ../../btb.sv "+incdir+" ../../test.svh 
+# -- Compiling package btb_sv_unit
+# -- Compiling module btb
+# -- Compiling module btb_testbench
+# 
+# Top level modules:
+# 	btb_testbench
+# End time: 16:51:06 on May 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:51:07 on May 25,2018, Elapsed time: 0:02:30
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work pc_testbench 
+# Start time: 16:51:07 on May 25,2018
+# Loading sv_std.std
+# Loading work.pcgen_stage_sv_unit
+# Loading work.pc_testbench
+# Loading work.pcgen_stage
+# Loading work.btb_sv_unit
+# Loading work.btb
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ../../pcgen_stage.sv(267)
+#    Time: 6500 ns  Iteration: 1  Instance: /pc_testbench
+# Break in Module pc_testbench at ../../pcgen_stage.sv line 267
+# End time: 17:14:41 on May 25,2018, Elapsed time: 0:23:34
+# Errors: 0, Warnings: 0

@@ -1,0 +1,110 @@
+module cache_control_testbench #(
+    parameter int unsigned FETCH_ADDR_WIDTH = 56,       // Size of the fetch address
+    parameter int unsigned FETCH_DATA_WIDTH = 128,       // Size of the fetch data
+    parameter int unsigned ID_WIDTH         = 4,
+
+    parameter int unsigned AXI_ADDR_WIDTH   = 64,
+    parameter int unsigned AXI_DATA_WIDTH   = 64,
+    parameter int unsigned AXI_USER_WIDTH   = 6,
+    parameter int unsigned AXI_ID_WIDTH     = ID_WIDTH,
+    parameter int unsigned SLICE_DEPTH      = 2,
+    parameter int unsigned AXI_STRB_WIDTH   = AXI_DATA_WIDTH/8,
+
+    parameter int unsigned NB_BANKS         = 1,        // Number of Cache Banks : DO NOT CHANGE
+    parameter int unsigned NB_WAYS          = 4,        // Cache associativity
+    parameter int unsigned CACHE_SIZE       = 2*16*1024,  // Ccache capacity in Byte
+    parameter int unsigned CACHE_LINE       = 4 
+);
+    localparam OFFSET             = 4;
+    localparam WAY_SIZE           = CACHE_SIZE/NB_WAYS;
+    localparam SCM_NUM_ROWS       = WAY_SIZE/(CACHE_LINE*FETCH_DATA_WIDTH/8); // TAG
+    localparam SCM_TAG_ADDR_WIDTH = $clog2(SCM_NUM_ROWS);
+
+    localparam TAG_WIDTH          = (FETCH_ADDR_WIDTH - SCM_TAG_ADDR_WIDTH - $clog2(CACHE_LINE) - OFFSET + 1);
+
+    localparam DATA_WIDTH          = FETCH_DATA_WIDTH;
+    localparam SCM_DATA_ADDR_WIDTH = $clog2(SCM_NUM_ROWS)+$clog2(CACHE_LINE);  // Because of 64 Access
+
+    localparam SET_ID_LSB          = $clog2(DATA_WIDTH*CACHE_LINE)-3;
+    localparam SET_ID_MSB          = SET_ID_LSB + SCM_TAG_ADDR_WIDTH - 1;
+    localparam TAG_LSB             = SET_ID_MSB + 1;
+    localparam TAG_MSB             = TAG_LSB + TAG_WIDTH - 2 ; //1 bit is count for valid
+
+	logic                                             clk_i;
+	logic                                             rst_ni;
+	logic                                             bypass_icache_i;
+	logic                                             cache_is_bypassed_o;
+	logic                                             flush_icache_i;
+	logic                                             cache_is_flushed_o;
+
+	logic                                             flush_set_ID_req_i;
+	logic [FETCH_ADDR_WIDTH-1:0]                      flush_set_ID_addr_i;
+	logic                                             flush_set_ID_ack_o;
+	// interface with processor
+	logic                                             fetch_req_i;
+	logic [FETCH_ADDR_WIDTH-1:0]                      fetch_addr_i;
+	logic                                             fetch_gnt_o;
+	logic                                             fetch_rvalid_o;
+	logic [FETCH_DATA_WIDTH-1:0]                      fetch_rdata_o;
+	// interface with READ PORT --> SCM DATA
+	logic [NB_WAYS-1:0]                               DATA_req_o;
+	logic                                             DATA_we_o;
+	logic [SCM_DATA_ADDR_WIDTH-1:0]                   DATA_addr_o;
+	logic [NB_WAYS-1:0][FETCH_DATA_WIDTH-1:0]           DATA_rdata_i;
+	logic [FETCH_DATA_WIDTH-1:0]                      DATA_wdata_o;
+	// interface with READ PORT --> SCM TAG
+	logic [NB_WAYS-1:0]                               TAG_req_o;
+	logic [SCM_TAG_ADDR_WIDTH-1:0]                    TAG_addr_o;
+	logic [NB_WAYS-1:0][TAG_WIDTH-1:0]            TAG_rdata_i;
+	logic [TAG_WIDTH-1:0]                         TAG_wdata_o;
+	logic                                             TAG_we_o;
+	// Interface to cache_controller_to uDMA L2 port
+	logic                                             refill_req_o;
+	logic                                             refill_gnt_i;
+	logic                                             refill_type_o;
+	logic [AXI_ADDR_WIDTH-1:0]                      refill_addr_o;
+	logic                                             refill_r_valid_i;
+	logic [AXI_DATA_WIDTH-1:0]                      refill_r_data_i;
+	logic                                             refill_r_last_i;
+
+	
+
+
+	icache_controller  #(
+        .FETCH_ADDR_WIDTH         ( FETCH_ADDR_WIDTH         ),
+        .FETCH_DATA_WIDTH         ( FETCH_DATA_WIDTH         ),
+
+        .NB_CORES                 ( 1                        ),
+        .NB_WAYS                  ( NB_WAYS                  ),
+        .CACHE_LINE               ( CACHE_LINE               ),
+
+        .SCM_TAG_ADDR_WIDTH       ( SCM_TAG_ADDR_WIDTH       ),
+        .SCM_DATA_ADDR_WIDTH      ( SCM_DATA_ADDR_WIDTH      ),
+        .SCM_TAG_WIDTH            ( TAG_WIDTH                ),
+        .SCM_DATA_WIDTH           ( DATA_WIDTH               ),
+
+        .SET_ID_LSB               ( SET_ID_LSB               ),
+        .SET_ID_MSB               ( SET_ID_MSB               ),
+        .TAG_LSB                  ( TAG_LSB                  ),
+        .TAG_MSB                  ( TAG_MSB                  )
+	) dut (
+		.*
+	);
+
+
+parameter CLOCK_PERIOD=1000;
+	initial begin
+		clk_i <= 0;
+		forever #(CLOCK_PERIOD/2) clk_i <= ~clk_i;
+	end
+	
+	initial
+	begin
+	rst_ni <= 1'b0;bypass_icache_i<=1'b0;flush_icache_i<=1'b0;@(posedge clk_i);
+	rst_ni <= 1'b1;fetch_req_i<=1'b1;fetch_addr_i<= 56'h0fe3;@(posedge clk_i);
+	@(posedge clk_i);@(posedge clk_i);@(posedge clk_i);@(posedge clk_i);@(posedge clk_i);
+	
+	$stop;
+	end
+
+endmodule
